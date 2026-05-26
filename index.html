@@ -442,16 +442,33 @@
             headers: { 'Accept': 'application/json' }
           });
           if (res.ok) {
-            btn.textContent = 'Inquiry Sent! ✓';
-            btn.style.background = '#1e3e2b';
-            form.reset();
-            setTimeout(() => {
-              btn.textContent = 'Send Inquiry';
-              btn.disabled = false;
-              btn.style.background = '';
-            }, 4000);
+            form.innerHTML = `
+              <div style="
+                text-align:center;
+                padding:48px 24px;
+                background:#f4f8f5;
+                border-radius:12px;
+                border:1px solid #c8dece;
+              ">
+                <div style="
+                  width:56px;height:56px;
+                  background:#2d5a3d;
+                  border-radius:50%;
+                  display:flex;align-items:center;justify-content:center;
+                  margin:0 auto 20px;
+                  font-size:24px;color:#fff;
+                ">✓</div>
+                <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:#1a1a1a;margin-bottom:12px;">
+                  Inquiry Received!
+                </h3>
+                <p style="color:#6b6b6b;font-size:0.9rem;line-height:1.7;margin:0;">
+                  Thank you for reaching out.<br />
+                  Our team will review your inquiry and get back to you<br />
+                  <strong style="color:#2d5a3d;">within 1–2 business days.</strong>
+                </p>
+              </div>`;
           } else {
-            btn.textContent = 'Something went wrong';
+            btn.textContent = 'Something went wrong — try again';
             btn.disabled = false;
           }
         } catch {

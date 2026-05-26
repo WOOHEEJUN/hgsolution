@@ -201,10 +201,31 @@
             headers: { 'Accept': 'application/json' }
           });
           if (res.ok) {
-            txt.textContent = 'Inquiry Sent!';
-            btn.style.background = '#1e3e2b';
-            form.reset();
-            setTimeout(() => { txt.textContent = 'Send Inquiry'; btn.disabled = false; btn.style.background = ''; }, 4000);
+            form.innerHTML = `
+              <div style="
+                text-align:center;
+                padding:56px 32px;
+                background:#f4f8f5;
+                border-radius:16px;
+                border:1px solid #c8dece;
+              ">
+                <div style="
+                  width:64px;height:64px;
+                  background:#2d5a3d;
+                  border-radius:50%;
+                  display:flex;align-items:center;justify-content:center;
+                  margin:0 auto 24px;
+                  font-size:28px;color:#fff;
+                ">✓</div>
+                <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;color:#1a1a1a;margin-bottom:14px;">
+                  Inquiry Received!
+                </h3>
+                <p style="color:#6b6b6b;font-size:0.92rem;line-height:1.8;margin:0;">
+                  Thank you for contacting HG Solution.<br />
+                  Our team will review your message and get back to you<br />
+                  <strong style="color:#2d5a3d;">within 1–2 business days.</strong>
+                </p>
+              </div>`;
           } else {
             txt.textContent = 'Something went wrong';
             btn.disabled = false;
