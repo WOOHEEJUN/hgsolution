@@ -218,9 +218,6 @@
     const btn  = document.getElementById('submitBtn');
     const txt  = document.getElementById('submitText');
 
-    // 테스트 모드: URL에 #test-success 붙이면 완료 화면 미리보기
-    if (location.hash === '#test-success' && form) showSuccess(form);
-
     if (form) {
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
