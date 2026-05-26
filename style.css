@@ -268,7 +268,7 @@ p:last-child { margin-bottom: 0; }
   gap: 10px;
   justify-content: center;
 }
-.brand__tags span {
+.brand__tags > span {
   background: var(--clr-white);
   color: var(--clr-accent);
   border: 1px solid var(--clr-accent);
