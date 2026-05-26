@@ -1,3 +1,27 @@
+// ── LANGUAGE SWITCH ──────────────────────────────
+function applyLang(lang) {
+  document.documentElement.dataset.lang = lang;
+  localStorage.setItem('hg-lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('lang-btn--active', btn.dataset.lang === lang);
+  });
+  // Update input placeholders
+  document.querySelectorAll('[data-ph-en]').forEach(el => {
+    el.placeholder = lang === 'ko' ? (el.dataset.phKo || '') : (el.dataset.phEn || '');
+  });
+  // Update select placeholder option
+  document.querySelectorAll('select[data-ph-en]').forEach(el => {
+    el.options[0].text = lang === 'ko' ? (el.dataset.phKo || '') : (el.dataset.phEn || '');
+  });
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+});
+
+// Apply saved or default lang
+applyLang(localStorage.getItem('hg-lang') || 'en');
+
 // Header scroll effect
 const header = document.querySelector('.header');
 window.addEventListener('scroll', () => {

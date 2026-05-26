@@ -503,3 +503,45 @@ p:last-child { margin-bottom: 0; }
   .btn { width: 100%; text-align: center; }
   .about__stats { grid-template-columns: 1fr; }
 }
+
+/* ===== LANGUAGE TOGGLE ===== */
+.t-ko { display: none; }
+html[data-lang="ko"] .t-en { display: none; }
+html[data-lang="ko"] .t-ko { display: revert; }
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.header.scrolled .lang-switch { border-color: var(--clr-border); }
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  padding: 5px 10px;
+  font-family: var(--ff-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  color: rgba(255,255,255,0.6);
+  transition: all 0.2s;
+  line-height: 1;
+}
+.lang-btn + .lang-btn { border-left: 1.5px solid rgba(255,255,255,0.35); }
+.header.scrolled .lang-btn { color: var(--clr-gray); }
+.header.scrolled .lang-btn + .lang-btn { border-left-color: var(--clr-border); }
+
+.lang-btn--active { background: rgba(255,255,255,0.2); color: #fff; }
+.header.scrolled .lang-btn--active { background: var(--clr-accent); color: #fff; }
+
+/* Korean font tuning */
+html[data-lang="ko"] body { word-break: keep-all; }
+html[data-lang="ko"] h2,
+html[data-lang="ko"] h3,
+html[data-lang="ko"] h4 { font-family: var(--ff-sans); font-weight: 600; line-height: 1.4; }
