@@ -88,44 +88,52 @@
 .filter-tabs::-webkit-scrollbar { display: none; }
 
 .ftab {
-  display: flex;
+  display: inline-flex !important;
   align-items: center;
   gap: 6px;
-  padding: 8px 18px;
-  border: 1.5px solid #e5e0d8;
-  border-radius: 8px;
-  background: transparent;
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  color: #6b6b6b;
+  padding: 9px 20px !important;
+  border: 1.5px solid #e5e0d8 !important;
+  border-radius: 8px !important;
+  background: #fff !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: #6b6b6b !important;
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.2s ease;
   flex-shrink: 0;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  line-height: 1;
 }
 .ftab:hover {
-  border-color: #2d5a3d;
-  color: #2d5a3d;
-  background: #f4f8f5;
+  border-color: #2d5a3d !important;
+  color: #2d5a3d !important;
+  background: #f4f8f5 !important;
 }
-.ftab--active {
-  background: #2d5a3d;
-  border-color: #2d5a3d;
-  color: #fff;
+.ftab.ftab--active {
+  background: #2d5a3d !important;
+  border-color: #2d5a3d !important;
+  color: #fff !important;
 }
-.ftab--active:hover {
-  background: #1e3e2b;
-  color: #fff;
+.ftab.ftab--active:hover {
+  background: #1e3e2b !important;
 }
 .ftab__count {
-  background: rgba(255,255,255,0.25);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 18px;
+  background: rgba(0,0,0,0.08);
   border-radius: 50px;
-  padding: 0 7px;
+  padding: 0 6px;
   font-size: 11px;
   font-weight: 600;
 }
-.ftab--active .ftab__count {
+.ftab.ftab--active .ftab__count {
   background: rgba(255,255,255,0.2);
 }
 
