@@ -428,8 +428,40 @@
 
   <script src="main.js"></script>
   <script>
+    function showSuccess(form) {
+      form.innerHTML = `
+        <div style="
+          text-align:center;
+          padding:48px 24px;
+          background:#f4f8f5;
+          border-radius:12px;
+          border:1px solid #c8dece;
+        ">
+          <div style="
+            width:56px;height:56px;
+            background:#2d5a3d;
+            border-radius:50%;
+            display:flex;align-items:center;justify-content:center;
+            margin:0 auto 20px;
+            font-size:24px;color:#fff;
+          ">✓</div>
+          <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:#1a1a1a;margin-bottom:12px;">
+            Inquiry Received!
+          </h3>
+          <p style="color:#6b6b6b;font-size:0.9rem;line-height:1.7;margin:0;">
+            Thank you for reaching out.<br />
+            Our team will review your inquiry and get back to you<br />
+            <strong style="color:#2d5a3d;">within 1–2 business days.</strong>
+          </p>
+        </div>`;
+    }
+
     const form = document.getElementById('contactForm');
     const btn  = form ? form.querySelector('button[type="submit"]') : null;
+
+    // 테스트 모드: URL에 #test-success 붙이면 완료 화면 미리보기
+    if (location.hash === '#test-success' && form) showSuccess(form);
+
     if (form && btn) {
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -442,31 +474,7 @@
             headers: { 'Accept': 'application/json' }
           });
           if (res.ok) {
-            form.innerHTML = `
-              <div style="
-                text-align:center;
-                padding:48px 24px;
-                background:#f4f8f5;
-                border-radius:12px;
-                border:1px solid #c8dece;
-              ">
-                <div style="
-                  width:56px;height:56px;
-                  background:#2d5a3d;
-                  border-radius:50%;
-                  display:flex;align-items:center;justify-content:center;
-                  margin:0 auto 20px;
-                  font-size:24px;color:#fff;
-                ">✓</div>
-                <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:#1a1a1a;margin-bottom:12px;">
-                  Inquiry Received!
-                </h3>
-                <p style="color:#6b6b6b;font-size:0.9rem;line-height:1.7;margin:0;">
-                  Thank you for reaching out.<br />
-                  Our team will review your inquiry and get back to you<br />
-                  <strong style="color:#2d5a3d;">within 1–2 business days.</strong>
-                </p>
-              </div>`;
+            showSuccess(form);
           } else {
             btn.textContent = 'Something went wrong — try again';
             btn.disabled = false;
