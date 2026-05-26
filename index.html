@@ -349,7 +349,54 @@
         </div>
         <div class="form-group">
           <label for="country">Country *</label>
-          <input type="text" id="country" name="country" placeholder="Country" required />
+          <div style="position:relative;">
+            <select id="country" name="country" required style="width:100%;padding:14px 40px 14px 16px;border:1.5px solid #e5e0d8;border-radius:8px;font-family:'Inter',sans-serif;font-size:14px;color:#1a1a1a;background:#faf9f7;outline:none;cursor:pointer;appearance:none;-webkit-appearance:none;transition:border-color 0.2s;">
+              <option value="">Select your country...</option>
+              <optgroup label="Asia Pacific">
+                <option value="CN">China</option>
+                <option value="JP">Japan</option>
+                <option value="TH">Thailand</option>
+                <option value="VN">Vietnam</option>
+                <option value="SG">Singapore</option>
+                <option value="MY">Malaysia</option>
+                <option value="ID">Indonesia</option>
+                <option value="PH">Philippines</option>
+                <option value="TW">Taiwan</option>
+                <option value="HK">Hong Kong</option>
+                <option value="AU">Australia</option>
+                <option value="NZ">New Zealand</option>
+                <option value="IN">India</option>
+              </optgroup>
+              <optgroup label="Americas">
+                <option value="US">United States</option>
+                <option value="CA">Canada</option>
+                <option value="MX">Mexico</option>
+                <option value="BR">Brazil</option>
+              </optgroup>
+              <optgroup label="Europe">
+                <option value="GB">United Kingdom</option>
+                <option value="DE">Germany</option>
+                <option value="FR">France</option>
+                <option value="IT">Italy</option>
+                <option value="ES">Spain</option>
+                <option value="NL">Netherlands</option>
+                <option value="SE">Sweden</option>
+                <option value="NO">Norway</option>
+                <option value="PL">Poland</option>
+                <option value="RU">Russia</option>
+              </optgroup>
+              <optgroup label="Middle East &amp; Africa">
+                <option value="AE">UAE</option>
+                <option value="SA">Saudi Arabia</option>
+                <option value="TR">Turkey</option>
+                <option value="ZA">South Africa</option>
+              </optgroup>
+              <optgroup label="Other">
+                <option value="OTHER">Other</option>
+              </optgroup>
+            </select>
+            <svg style="position:absolute;right:14px;top:50%;transform:translateY(-50%);pointer-events:none;" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="#6b6b6b" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
         </div>
         <div class="form-group">
           <label for="message">Message *</label>
