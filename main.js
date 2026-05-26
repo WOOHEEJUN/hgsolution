@@ -58,6 +58,31 @@ if (navToggle && nav) {
   });
 }
 
+// Hero parallax (데스크탑 전용 + reduced-motion 대응)
+const heroSection = document.querySelector('.hero');
+const heroBgImg   = document.querySelector('.hero__bg img');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (heroSection && heroBgImg && !prefersReducedMotion) {
+  let rafPending = false;
+
+  window.addEventListener('scroll', () => {
+    // 768px 미만(모바일)은 비활성화 — iOS Safari 버벅임 방지
+    if (window.innerWidth < 768) return;
+    if (rafPending) return;
+
+    rafPending = true;
+    requestAnimationFrame(() => {
+      const scrollY    = window.scrollY;
+      const heroHeight = heroSection.offsetHeight;
+      if (scrollY <= heroHeight) {
+        heroBgImg.style.transform = `translateY(${scrollY * 0.35}px)`;
+      }
+      rafPending = false;
+    });
+  }, { passive: true });
+}
+
 // Fade-in on scroll
 const fadeEls = document.querySelectorAll('.product-card, .why__card, .about__grid');
 const observer = new IntersectionObserver((entries) => {
