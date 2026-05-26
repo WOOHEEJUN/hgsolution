@@ -122,7 +122,7 @@ p:last-child { margin-bottom: 0; }
 }
 .logo__hg { color: var(--clr-accent); }
 .logo__sol { color: var(--clr-dark); }
-.nav { display: flex; gap: 36px; }
+.nav { display: flex; gap: 36px; margin-left: auto; }
 .nav a {
   font-size: 13px;
   font-weight: 500;
@@ -513,12 +513,11 @@ html[data-lang="ko"] .t-ko { display: revert; }
   display: flex;
   align-items: center;
   margin-left: 16px;
-  border: 1.5px solid rgba(255,255,255,0.35);
+  border: 1.5px solid var(--clr-border);
   border-radius: 6px;
   overflow: hidden;
   flex-shrink: 0;
 }
-.header.scrolled .lang-switch { border-color: var(--clr-border); }
 
 .lang-btn {
   background: transparent;
@@ -529,16 +528,14 @@ html[data-lang="ko"] .t-ko { display: revert; }
   font-weight: 600;
   letter-spacing: 0.06em;
   cursor: pointer;
-  color: rgba(255,255,255,0.6);
+  color: var(--clr-gray);
   transition: all 0.2s;
   line-height: 1;
 }
-.lang-btn + .lang-btn { border-left: 1.5px solid rgba(255,255,255,0.35); }
-.header.scrolled .lang-btn { color: var(--clr-gray); }
-.header.scrolled .lang-btn + .lang-btn { border-left-color: var(--clr-border); }
+.lang-btn + .lang-btn { border-left: 1.5px solid var(--clr-border); }
+.lang-btn:hover:not(.lang-btn--active) { color: var(--clr-dark); }
 
-.lang-btn--active { background: rgba(255,255,255,0.2); color: #fff; }
-.header.scrolled .lang-btn--active { background: var(--clr-accent); color: #fff; }
+.lang-btn--active { background: var(--clr-accent); color: #fff; }
 
 /* Korean font tuning */
 html[data-lang="ko"] body { word-break: keep-all; }
