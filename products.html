@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products — HG Solution</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="pages.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__hg">HG</span><span class="logo__sol">Solution</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#brands">Brands</a>
+        <a href="products.html" class="is-active">Products</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-label="menu">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="pg-header">
+    <div class="container pg-header__inner">
+      <div class="pg-header__text">
+        <span class="pg-header__eyebrow">One-day's you · MADE IN KOREA</span>
+        <h1 class="pg-header__title">Product<br /><em>Lineup</em></h1>
+        <p class="pg-header__desc">Premium Korean skincare available for B2B wholesale &amp; global export. All products are Ministry of Food and Drug Safety certified.</p>
+      </div>
+      <div class="pg-header__img">
+        <img src="image/분위기 이미지 2.png" alt="K-Beauty products" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTER -->
+  <div class="filter-wrap">
+    <div class="container">
+      <div class="filter-tabs">
+        <button class="ftab ftab--active" data-filter="all">All <span class="ftab__count" id="countAll">14</span></button>
+        <button class="ftab" data-filter="sheet-mask">Sheet Masks</button>
+        <button class="ftab" data-filter="toner-pad">Toner Pads</button>
+        <button class="ftab" data-filter="skincare">Skincare</button>
+        <button class="ftab" data-filter="cleansing">Cleansing</button>
+        <button class="ftab" data-filter="suncare">Sun Care</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCTS -->
+  <main class="prod-section">
+    <div class="container">
+      <div class="prod-grid" id="prodGrid">
+
+        <!-- ── SHEET MASKS ── -->
+        <article class="pcard" data-cat="sheet-mask">
+          <div class="pcard__img">
+            <img src="image/products/cica_30days_mask.jpg" alt="Cica:ming 30 Days Mask" loading="lazy" />
+            <span class="pcard__cat">Sheet Mask</span>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__brand">One-day's you</p>
+            <h3 class="pcard__name">Cica:ming 30 Days Mask</h3>
+            <p class="pcard__desc">Daily soothing sheet mask with Centella Asiatica &amp; Tea Tree. Strengthens the skin barrier with 5 calming botanicals. Hygienic built-in tweezer included.</p>
+            <div class="pcard__foot">
+              <span class="pcard__vol">310ml / 30 sheets</span>
+              <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="sheet-mask">
+          <div class="pcard__img">
+            <img src="image/products/collagen_30days_mask.jpg" alt="Collagen 30 Days Mask" loading="lazy" />
+            <span class="pcard__cat">Sheet Mask</span>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__brand">One-day's you</p>
+            <h3 class="pcard__name">Collagen 30 Days Mask</h3>
+            <p class="pcard__desc">Elasticity-restoring daily mask with Hydrolyzed Collagen, Elastin &amp; Hyaluronic Acid. Dual-certified for Whitening &amp; Anti-Wrinkle.</p>
+            <div class="pcard__foot">
+              <span class="pcard__vol">310ml / 30 sheets</span>
+              <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="sheet-mask">
+          <div class="pcard__img">
+            <img src="image/products/oh_so_cool_mask.jpg" alt="Oh! So Cool Calming Mask" loading="lazy" />
+            <span class="pcard__cat">Sheet Mask</span>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__brand">One-day's you</p>
+            <h3 class="pcard__name">Oh! So Cool Calming Mask</h3>
+            <p class="pcard__desc">Clinically-tested instant cooling &amp; soothing facial mask. Reduces skin temperature on contact with patented Green Energy Complex.</p>
+            <div class="pcard__foot">
+              <span class="pcard__vol">25ml × 5pcs</span>
+              <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── TONER PADS ── -->
+        <article class="pcard" data-cat="toner-pad">
+          <div class="pcard__img">
+            <img src="image/products/help_dacto_pad.jpg" alt="Help Me! Dacto Pad" loading="lazy" />
+            <span class="pcard__cat">Toner Pad</span>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__brand">One-day's you</p>
+            <h3 class="pcard__name">Help Me! Dacto Pad</h3>
+            <p class="pcard__desc">Hypoallergenic toner pad with 8 types of Hyaluronic Acid. Double-sided: embossed side exfoliates, gauze side hydrates. Patented BSASM formula.</p>
+            <div class="pcard__foot">
+              <span class="pcard__vol">125ml / 60 pads</span>
+              <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="toner-pad">
+          <div class="pcard__img">
+            <img src="image/products/ceramide_ampoule_pad.jpg" alt="Ceramide Ampoule Pad" loading="lazy" />
+            <span class="pcard__cat">Toner Pad</span>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__brand">One-day's you</p>
+            <h3 class="pcard__name">Help Me! Eco-Intense Ceramide Ampoule Pad</h3>
+            <p class="pcard__desc">Naturally-derived ceramide with patented 3D Air Mesh Lotus Pad. Reinforces skin barrier &amp; maintains long-term moisture.</p>
+            <div class="pcard__foot">
+              <span class="pcard__vol">160ml / 90 pads</span>
+              <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="toner-pad">
+          <div class="pcard__img">
+            <img src="image/products/ice_cooling_pad.jpg" alt="Ice Cooling Pad" loading="lazy" />
+            <span class="pcard__cat">Toner Pad</span>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__brand">One-day's you</p>
+            <h3 class="pcard__name">Help Me! Ice Cooling Pad</h3>
+            <p class="pcard__desc">Instant-cooling pad with clinically-certified cooling effect. Aquaxyl &amp; Betaine deliver deep moisture while soothing sensitised skin.</p>
+            <div class="pcard__foot">
+              <span class="pcard__vol">110ml / 80 pads</span>
+              <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="toner-pad">
+          <div class="pcard__img">
+            <img src="image/products/pore_t_pad.jpg" alt="Pore-T Pad" loading="lazy" />
+            <span class="pcard__cat">Toner Pad</span>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__brand">One-day's you</p>
+            <h3 class="pcard__name">Help Me! Pore-T Pad</h3>
+            <p class="pcard__desc">Daily pore-tightening pad with Witch Hazel &amp; Malt Extract. Clinically proven to reduce sebum &amp; shrink pores. Non-comedogenic tested.</p>
+            <div class="pcard__foot">
+              <span class="pcard__vol">125ml / 60 pads</span>
+              <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="toner-pad">
+          <div class="pcard__img">
+            <img src="image/products/real_collagen_pad.jpg" alt="Real Collagen Pad" loading="lazy" />
+            <span class="pcard__cat">Toner Pad</span>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__brand">One-day's you</p>
+            <h3 class="pcard__name">Help Me! Real Collagen Pad</h3>
+            <p class="pcard__desc">Jelly-fit pad with 20,000ppm Collagen Extract &amp; Pomegranate. Whitening &amp; Anti-Wrinkle dual-certified. Eco-friendly biodegradable fabric.</p>
+            <div class="pcard__foot">
+              <span class="pcard__vol">130ml / 70 pads</span>
+              <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── SKINCARE ── -->
+        <article class="pcard" data-cat="skincare">
+          <div class="pcard__img">
+            <img src="image/products/real_collagen_cream.jpg" alt="Real Collagen Intense Cream" loading="lazy" />
+            <span class="pcard__cat">Skincare</span>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__brand">One-day's you</p>
+            <h3 class="pcard__name">Real Collagen Intense Cream</h3>
+            <p class="pcard__desc">Anti-aging lifting cream with 250,000ppm low-molecular collagen (243 Dalton), 7 peptide complex &amp; Glutathione. Stringy texture for deep skin penetration.</p>
+            <div class="pcard__foot">
+              <span class="pcard__vol">30ml</span>
+              <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── CLEANSING ── -->
+        <article class="pcard" data-cat="cleansing">
+          <div class="pcard__img">
+            <img src="image/products/cica_peeling_gel.jpg" alt="Cica:ming Peeling Gel" loading="lazy" />
+            <span class="pcard__cat">Cleansing</span>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__brand">One-day's you</p>
+            <h3 class="pcard__name">Cica:ming+ Peeling Gel</h3>
+            <p class="pcard__desc">Gentle exfoliating gel with 10%+ natural cellulose scrub &amp; Centella Asiatica. 60nm cellulose particles safe for the skin barrier. Hypoallergenic tested.</p>
+            <div class="pcard__foot">
+              <span class="pcard__vol">120ml</span>
+              <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="cleansing">
+          <div class="pcard__img">
+            <img src="image/products/deep_cleansing_oil.jpg" alt="Deep Cleansing Oil" loading="lazy" />
+            <span class="pcard__cat">Cleansing</span>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__brand">One-day's you</p>
+            <h3 class="pcard__name">P.Z. SSG SSAG Deep Cleansing Oil</h3>
+            <p class="pcard__desc">89% natural vegetable oil formula. Emulsifies on contact with water to dissolve blackheads, makeup &amp; sebum. All ingredients EWG Green-rated.</p>
+            <div class="pcard__foot">
+              <span class="pcard__vol">200ml</span>
+              <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="cleansing">
+          <div class="pcard__img">
+            <img src="image/products/ssoc_blackhead.jpg" alt="SSOC SSOC Blackhead" loading="lazy" />
+            <span class="pcard__cat">Cleansing</span>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__brand">One-day's you</p>
+            <h3 class="pcard__name">P.Z. SSOC SSOC No More Blackhead</h3>
+            <p class="pcard__desc">30 naturally-derived ingredients dissolve blackheads in 3 steps without extractions. Witch Hazel &amp; patented BSASM. Safe for sensitive skin.</p>
+            <div class="pcard__foot">
+              <span class="pcard__vol">100ml</span>
+              <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── SUN CARE ── -->
+        <article class="pcard" data-cat="suncare">
+          <div class="pcard__img">
+            <img src="image/products/sun_bb_cream.jpg" alt="Me Nyeo Cream Sun BB" loading="lazy" />
+            <span class="pcard__cat">Sun Care</span>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__brand">One-day's you</p>
+            <h3 class="pcard__name">Me Nyeo Cream Anti-pollution Sun BB</h3>
+            <p class="pcard__desc">SPF50+ PA+++ triple-certified BB. Whitening, Anti-Wrinkle &amp; UV protection. Second Skin Film blocks fine dust, heavy metals &amp; pollutants.</p>
+            <div class="pcard__foot">
+              <span class="pcard__vol">50ml</span>
+              <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="pcard" data-cat="suncare">
+          <div class="pcard__img">
+            <img src="image/products/me_nyeo_cream_w.jpg" alt="Me Nyeo Cream W" loading="lazy" />
+            <span class="pcard__cat">Sun Care</span>
+          </div>
+          <div class="pcard__body">
+            <p class="pcard__brand">One-day's you</p>
+            <h3 class="pcard__name">Me Nyeo Cream W</h3>
+            <p class="pcard__desc">Natural tone-up cream with Goat Milk, Niacinamide &amp; Adenosine. Dual-certified Whitening &amp; Anti-Aging. Lightweight, non-sticky multi-use formula.</p>
+            <div class="pcard__foot">
+              <span class="pcard__vol">50ml</span>
+              <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <!-- empty state -->
+      <p class="prod-empty" id="prodEmpty">No products in this category.</p>
+    </div>
+  </main>
+
+  <!-- INQUIRY STRIP -->
+  <section class="inq-strip">
+    <div class="container inq-strip__inner">
+      <div class="inq-strip__text">
+        <h2>Looking for wholesale pricing?</h2>
+        <p>We provide MOQ details, samples, and export documentation upon request.</p>
+      </div>
+      <a href="contact.html" class="inq-btn">Send an Inquiry <span>→</span></a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="logo"><span class="logo__hg">HG</span><span class="logo__sol">Solution</span></span>
+        <p>K-Beauty Export &amp; Distribution<br />에이치지솔루션 | Business Reg. 666-39-01391</p>
+      </div>
+      <div class="footer__links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#brands">Brands</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer__copy">
+        <p>&copy; 2025 HG Solution. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    const ftabs = document.querySelectorAll('.ftab');
+    const pcards = document.querySelectorAll('.pcard');
+    const emptyEl = document.getElementById('prodEmpty');
+
+    ftabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        ftabs.forEach(t => t.classList.remove('ftab--active'));
+        tab.classList.add('ftab--active');
+        const f = tab.dataset.filter;
+        let n = 0;
+        pcards.forEach(c => {
+          const show = f === 'all' || c.dataset.cat === f;
+          c.style.display = show ? '' : 'none';
+          if (show) n++;
+        });
+        emptyEl.style.display = n ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>
