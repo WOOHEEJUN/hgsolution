@@ -359,6 +359,34 @@ p:last-child { margin-bottom: 0; }
    =========================== */
 .products { background: var(--clr-bg); }
 .products__category { margin-bottom: 64px; }
+
+.products__brand-divider {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 16px 0 48px;
+}
+.products__brand-divider::before,
+.products__brand-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--clr-border);
+}
+.products__brand-divider span {
+  font-family: var(--ff-serif);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--clr-dark);
+  white-space: nowrap;
+}
+.products__brand-divider small {
+  font-family: var(--ff-sans);
+  font-size: 0.72rem;
+  color: var(--clr-gray);
+  letter-spacing: 1px;
+  margin-left: 6px;
+}
 .category__title {
   font-family: var(--ff-serif);
   font-size: 1.4rem;
