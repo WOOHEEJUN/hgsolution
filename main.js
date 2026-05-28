@@ -1,25 +1,74 @@
 // ── LANGUAGE SWITCH ──────────────────────────────
+const SUPPORTED_LANGS = ['en', 'ko', 'ja'];
+const LANG_LABEL = { en: 'English', ko: '한국어', ja: '日本語' };
+
 function applyLang(lang) {
+  if (!SUPPORTED_LANGS.includes(lang)) lang = 'en';
   document.documentElement.dataset.lang = lang;
   localStorage.setItem('hg-lang', lang);
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('lang-btn--active', btn.dataset.lang === lang);
+
+  // Update current-lang label in globe button
+  document.querySelectorAll('.lang-current').forEach(el => {
+    el.textContent = LANG_LABEL[lang];
   });
+
+  // Update active option marker in dropdowns
+  document.querySelectorAll('.lang-option').forEach(opt => {
+    opt.classList.toggle('lang-option--active', opt.dataset.lang === lang);
+  });
+
   // Update input placeholders
   document.querySelectorAll('[data-ph-en]').forEach(el => {
-    el.placeholder = lang === 'ko' ? (el.dataset.phKo || '') : (el.dataset.phEn || '');
-  });
-  // Update select placeholder option
-  document.querySelectorAll('select[data-ph-en]').forEach(el => {
-    el.options[0].text = lang === 'ko' ? (el.dataset.phKo || '') : (el.dataset.phEn || '');
+    const ph = lang === 'ko' ? el.dataset.phKo
+             : lang === 'ja' ? el.dataset.phJa
+             : el.dataset.phEn;
+    if (el.tagName === 'SELECT') {
+      if (el.options[0]) el.options[0].text = ph || '';
+    } else {
+      el.placeholder = ph || '';
+    }
   });
 }
 
-document.querySelectorAll('.lang-btn').forEach(btn => {
-  btn.addEventListener('click', () => applyLang(btn.dataset.lang));
-});
+// Globe dropdown toggle
+function setupLangSwitch() {
+  document.querySelectorAll('.lang-switch').forEach(sw => {
+    const btn = sw.querySelector('.lang-globe');
+    const menu = sw.querySelector('.lang-dropdown');
+    if (!btn || !menu) return;
 
-// Apply saved or default lang
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = sw.classList.contains('lang-switch--open');
+      // Close all others first
+      document.querySelectorAll('.lang-switch--open').forEach(s => s.classList.remove('lang-switch--open'));
+      if (!isOpen) sw.classList.add('lang-switch--open');
+    });
+
+    menu.querySelectorAll('.lang-option').forEach(opt => {
+      opt.addEventListener('click', () => {
+        applyLang(opt.dataset.lang);
+        sw.classList.remove('lang-switch--open');
+      });
+    });
+  });
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('.lang-switch--open').forEach(sw => {
+      if (!sw.contains(e.target)) sw.classList.remove('lang-switch--open');
+    });
+  });
+
+  // Close on Esc
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.lang-switch--open').forEach(sw => sw.classList.remove('lang-switch--open'));
+    }
+  });
+}
+
+setupLangSwitch();
 applyLang(localStorage.getItem('hg-lang') || 'en');
 
 // Header scroll effect

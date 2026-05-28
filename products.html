@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://hgsolution-global.com/products.html" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <script>if(localStorage.getItem('hg-lang')==='ko')document.documentElement.dataset.lang='ko';</script>
+  <script>(function(){var l=localStorage.getItem('hg-lang');if(l==='ko'||l==='ja')document.documentElement.dataset.lang=l;})();</script>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="pages.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -28,14 +28,22 @@
         <span class="logo__hg">HG</span><span class="logo__sol">Solution</span>
       </a>
       <nav class="nav">
-        <a href="./#about"><span class="t-en">About</span><span class="t-ko">소개</span></a>
-        <a href="./#brands"><span class="t-en">Brands</span><span class="t-ko">브랜드</span></a>
-        <a href="products.html" class="is-active"><span class="t-en">Products</span><span class="t-ko">제품</span></a>
-        <a href="contact.html"><span class="t-en">Contact</span><span class="t-ko">문의</span></a>
+        <a href="./#about"><span class="t-en">About</span><span class="t-ko">소개</span><span class="t-ja">会社情報</span></a>
+        <a href="./#brands"><span class="t-en">Brands</span><span class="t-ko">브랜드</span><span class="t-ja">ブランド</span></a>
+        <a href="products.html" class="is-active"><span class="t-en">Products</span><span class="t-ko">제품</span><span class="t-ja">製品</span></a>
+        <a href="contact.html"><span class="t-en">Contact</span><span class="t-ko">문의</span><span class="t-ja">お問い合わせ</span></a>
       </nav>
       <div class="lang-switch">
-        <button class="lang-btn" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="ko">KO</button>
+        <button class="lang-globe" aria-label="Language" aria-haspopup="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
+          <span class="lang-current">English</span>
+          <svg class="lang-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+        </button>
+        <div class="lang-dropdown" role="menu">
+          <button class="lang-option" data-lang="en" role="menuitem">English</button>
+          <button class="lang-option" data-lang="ko" role="menuitem">한국어</button>
+          <button class="lang-option" data-lang="ja" role="menuitem">日本語</button>
+        </div>
       </div>
       <button class="nav-toggle" aria-label="menu">&#9776;</button>
     </div>
@@ -46,9 +54,10 @@
     <div class="container pg-header__inner">
       <div class="pg-header__text">
         <span class="pg-header__eyebrow">One-day's you · EFFNE · MADE IN KOREA</span>
-        <h1 class="pg-header__title"><span class="t-en">Product<br /><em>Lineup</em></span><span class="t-ko">제품<br /><em>라인업</em></span></h1>
+        <h1 class="pg-header__title"><span class="t-en">Product<br /><em>Lineup</em></span><span class="t-ko">제품<br /><em>라인업</em></span><span class="t-ja">製品<br /><em>ラインナップ</em></span></h1>
         <p class="pg-header__desc t-en">Premium Korean skincare available for B2B wholesale &amp; global export. All products are Ministry of Food and Drug Safety certified.</p>
         <p class="pg-header__desc t-ko">B2B 도매 및 글로벌 수출 가능한 프리미엄 한국 스킨케어. 전 제품 식품의약품안전처 인증.</p>
+        <p class="pg-header__desc t-ja">B2B卸売・グローバル輸出対応のプレミアム韓国スキンケア。全製品 食品医薬品安全処認証。</p>
       </div>
       <div class="pg-header__img">
         <img src="image/mood.png" alt="K-Beauty products" />
@@ -60,14 +69,14 @@
   <div class="filter-wrap">
     <div class="container">
       <div class="filter-tabs">
-        <button class="ftab ftab--active" data-filter="all"><span class="t-en">All</span><span class="t-ko">전체</span> <span class="ftab__count" id="countAll">18</span></button>
-        <button class="ftab" data-filter="sheet-mask"><span class="t-en">Sheet Masks</span><span class="t-ko">시트 마스크</span></button>
-        <button class="ftab" data-filter="toner-pad"><span class="t-en">Toner Pads</span><span class="t-ko">토너 패드</span></button>
-        <button class="ftab" data-filter="eye-mask"><span class="t-en">Eye Masks</span><span class="t-ko">아이 마스크</span></button>
-        <button class="ftab" data-filter="serum-pad"><span class="t-en">Serum Pads</span><span class="t-ko">세럼 패드</span></button>
-        <button class="ftab" data-filter="skincare"><span class="t-en">Skincare</span><span class="t-ko">스킨케어</span></button>
-        <button class="ftab" data-filter="cleansing"><span class="t-en">Cleansing</span><span class="t-ko">클렌징</span></button>
-        <button class="ftab" data-filter="suncare"><span class="t-en">Sun Care</span><span class="t-ko">선케어</span></button>
+        <button class="ftab ftab--active" data-filter="all"><span class="t-en">All</span><span class="t-ko">전체</span><span class="t-ja">全て</span> <span class="ftab__count" id="countAll">18</span></button>
+        <button class="ftab" data-filter="sheet-mask"><span class="t-en">Sheet Masks</span><span class="t-ko">시트 마스크</span><span class="t-ja">シートマスク</span></button>
+        <button class="ftab" data-filter="toner-pad"><span class="t-en">Toner Pads</span><span class="t-ko">토너 패드</span><span class="t-ja">トナーパッド</span></button>
+        <button class="ftab" data-filter="eye-mask"><span class="t-en">Eye Masks</span><span class="t-ko">아이 마스크</span><span class="t-ja">アイマスク</span></button>
+        <button class="ftab" data-filter="serum-pad"><span class="t-en">Serum Pads</span><span class="t-ko">세럼 패드</span><span class="t-ja">セラムパッド</span></button>
+        <button class="ftab" data-filter="skincare"><span class="t-en">Skincare</span><span class="t-ko">스킨케어</span><span class="t-ja">スキンケア</span></button>
+        <button class="ftab" data-filter="cleansing"><span class="t-en">Cleansing</span><span class="t-ko">클렌징</span><span class="t-ja">クレンジング</span></button>
+        <button class="ftab" data-filter="suncare"><span class="t-en">Sun Care</span><span class="t-ko">선케어</span><span class="t-ja">サンケア</span></button>
       </div>
     </div>
   </div>
@@ -81,13 +90,14 @@
         <article class="pcard" data-cat="sheet-mask">
           <div class="pcard__img">
             <img src="image/products/cica_30days_mask.jpg" alt="Cica:ming 30 Days Mask" loading="lazy" />
-            <span class="pcard__cat"><span class="t-en">Sheet Mask</span><span class="t-ko">시트 마스크</span></span>
+            <span class="pcard__cat"><span class="t-en">Sheet Mask</span><span class="t-ko">시트 마스크</span><span class="t-ja">シートマスク</span></span>
           </div>
           <div class="pcard__body">
             <p class="pcard__brand">One-day's you</p>
             <h3 class="pcard__name">Cica:ming 30 Days Mask</h3>
             <p class="pcard__desc t-en">Daily soothing sheet mask with Centella Asiatica &amp; Tea Tree. Strengthens the skin barrier with 5 calming botanicals. Hygienic built-in tweezer included.</p>
             <p class="pcard__desc t-ko">센텔라 아시아티카·티트리 함유 데일리 진정 시트 마스크. 5가지 진정 식물 성분으로 피부 장벽 강화. 위생 핀셋 포함.</p>
+            <p class="pcard__desc t-ja">センテラアジアチカ・ティーツリー配合のデイリー鎮静シートマスク。5種の鎮静植物成分で肌バリアを強化。衛生ピンセット付き。</p>
             <div class="pcard__foot">
               <span class="pcard__vol">310ml / 30 sheets</span>
               <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
@@ -98,13 +108,14 @@
         <article class="pcard" data-cat="sheet-mask">
           <div class="pcard__img">
             <img src="image/products/collagen_30days_mask.jpg" alt="Collagen 30 Days Mask" loading="lazy" />
-            <span class="pcard__cat"><span class="t-en">Sheet Mask</span><span class="t-ko">시트 마스크</span></span>
+            <span class="pcard__cat"><span class="t-en">Sheet Mask</span><span class="t-ko">시트 마스크</span><span class="t-ja">シートマスク</span></span>
           </div>
           <div class="pcard__body">
             <p class="pcard__brand">One-day's you</p>
             <h3 class="pcard__name">Collagen 30 Days Mask</h3>
             <p class="pcard__desc t-en">Elasticity-restoring daily mask with Hydrolyzed Collagen, Elastin &amp; Hyaluronic Acid. Dual-certified for Whitening &amp; Anti-Wrinkle.</p>
             <p class="pcard__desc t-ko">가수분해 콜라겐·엘라스틴·히알루론산 함유 탄력 회복 데일리 마스크. 미백·주름 개선 이중 기능성 인증.</p>
+            <p class="pcard__desc t-ja">加水分解コラーゲン・エラスチン・ヒアルロン酸配合のハリ回復デイリーマスク。美白・シワ改善のダブル機能性認証。</p>
             <div class="pcard__foot">
               <span class="pcard__vol">310ml / 30 sheets</span>
               <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
@@ -115,13 +126,14 @@
         <article class="pcard" data-cat="sheet-mask">
           <div class="pcard__img">
             <img src="image/products/oh_so_cool_mask.jpg" alt="Oh! So Cool Calming Mask" loading="lazy" />
-            <span class="pcard__cat"><span class="t-en">Sheet Mask</span><span class="t-ko">시트 마스크</span></span>
+            <span class="pcard__cat"><span class="t-en">Sheet Mask</span><span class="t-ko">시트 마스크</span><span class="t-ja">シートマスク</span></span>
           </div>
           <div class="pcard__body">
             <p class="pcard__brand">One-day's you</p>
             <h3 class="pcard__name">Oh! So Cool Calming Mask</h3>
             <p class="pcard__desc t-en">Clinically-tested instant cooling &amp; soothing facial mask. Reduces skin temperature on contact with patented Green Energy Complex.</p>
             <p class="pcard__desc t-ko">임상 테스트 완료 즉각 쿨링·진정 마스크. 특허 Green Energy Complex로 피부 온도를 즉각 낮춥니다.</p>
+            <p class="pcard__desc t-ja">臨床テスト済みの即時クーリング・鎮静マスク。特許Green Energy Complexで肌温度を瞬時にダウン。</p>
             <div class="pcard__foot">
               <span class="pcard__vol">25ml × 5pcs</span>
               <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
@@ -133,13 +145,14 @@
         <article class="pcard" data-cat="toner-pad">
           <div class="pcard__img">
             <img src="image/products/help_dacto_pad.jpg" alt="Help Me! Dacto Pad" loading="lazy" />
-            <span class="pcard__cat"><span class="t-en">Toner Pad</span><span class="t-ko">토너 패드</span></span>
+            <span class="pcard__cat"><span class="t-en">Toner Pad</span><span class="t-ko">토너 패드</span><span class="t-ja">トナーパッド</span></span>
           </div>
           <div class="pcard__body">
             <p class="pcard__brand">One-day's you</p>
             <h3 class="pcard__name">Help Me! Dacto Pad</h3>
             <p class="pcard__desc t-en">Hypoallergenic toner pad with 8 types of Hyaluronic Acid. Double-sided: embossed side exfoliates, gauze side hydrates. Patented BSASM formula.</p>
             <p class="pcard__desc t-ko">8중 히알루론산 함유 저자극 토너 패드. 양면 설계: 엠보 면은 각질 제거, 거즈 면은 보습. 특허 BSASM 포뮬러.</p>
+            <p class="pcard__desc t-ja">8種ヒアルロン酸配合の低刺激トナーパッド。両面設計：エンボス面で角質ケア、ガーゼ面で保湿。特許BSASMフォーミュラ。</p>
             <div class="pcard__foot">
               <span class="pcard__vol">125ml / 60 pads</span>
               <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
@@ -150,13 +163,14 @@
         <article class="pcard" data-cat="toner-pad">
           <div class="pcard__img">
             <img src="image/products/ceramide_ampoule_pad.jpg" alt="Ceramide Ampoule Pad" loading="lazy" />
-            <span class="pcard__cat"><span class="t-en">Toner Pad</span><span class="t-ko">토너 패드</span></span>
+            <span class="pcard__cat"><span class="t-en">Toner Pad</span><span class="t-ko">토너 패드</span><span class="t-ja">トナーパッド</span></span>
           </div>
           <div class="pcard__body">
             <p class="pcard__brand">One-day's you</p>
             <h3 class="pcard__name">Help Me! Eco-Intense Ceramide Ampoule Pad</h3>
             <p class="pcard__desc t-en">Naturally-derived ceramide with patented 3D Air Mesh Lotus Pad. Reinforces skin barrier &amp; maintains long-term moisture.</p>
             <p class="pcard__desc t-ko">천연 유래 세라마이드·특허 3D Air Mesh Lotus 패드. 피부 장벽 강화 및 장기 보습 유지.</p>
+            <p class="pcard__desc t-ja">天然由来セラミド・特許3D Air Mesh Lotusパッド。肌バリアの強化と長時間保湿を両立。</p>
             <div class="pcard__foot">
               <span class="pcard__vol">160ml / 90 pads</span>
               <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
@@ -167,13 +181,14 @@
         <article class="pcard" data-cat="toner-pad">
           <div class="pcard__img">
             <img src="image/products/ice_cooling_pad.jpg" alt="Ice Cooling Pad" loading="lazy" />
-            <span class="pcard__cat"><span class="t-en">Toner Pad</span><span class="t-ko">토너 패드</span></span>
+            <span class="pcard__cat"><span class="t-en">Toner Pad</span><span class="t-ko">토너 패드</span><span class="t-ja">トナーパッド</span></span>
           </div>
           <div class="pcard__body">
             <p class="pcard__brand">One-day's you</p>
             <h3 class="pcard__name">Help Me! Ice Cooling Pad</h3>
             <p class="pcard__desc t-en">Instant-cooling pad with clinically-certified cooling effect. Aquaxyl &amp; Betaine deliver deep moisture while soothing sensitised skin.</p>
             <p class="pcard__desc t-ko">임상 인증 쿨링 효과. Aquaxyl·베타인으로 민감해진 피부에 깊은 보습과 진정을 동시에.</p>
+            <p class="pcard__desc t-ja">臨床認証のクーリング効果。Aquaxyl・ベタインで敏感になった肌に深い保湿と鎮静を同時に。</p>
             <div class="pcard__foot">
               <span class="pcard__vol">110ml / 80 pads</span>
               <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
@@ -184,13 +199,14 @@
         <article class="pcard" data-cat="toner-pad">
           <div class="pcard__img">
             <img src="image/products/pore_t_pad.jpg" alt="Pore-T Pad" loading="lazy" />
-            <span class="pcard__cat"><span class="t-en">Toner Pad</span><span class="t-ko">토너 패드</span></span>
+            <span class="pcard__cat"><span class="t-en">Toner Pad</span><span class="t-ko">토너 패드</span><span class="t-ja">トナーパッド</span></span>
           </div>
           <div class="pcard__body">
             <p class="pcard__brand">One-day's you</p>
             <h3 class="pcard__name">Help Me! Pore-T Pad</h3>
             <p class="pcard__desc t-en">Daily pore-tightening pad with Witch Hazel &amp; Malt Extract. Clinically proven to reduce sebum &amp; shrink pores. Non-comedogenic tested.</p>
             <p class="pcard__desc t-ko">위치하젤·맥아 추출물 함유 데일리 모공 케어 패드. 피지 감소·모공 축소 임상 입증. 논코메도제닉 테스트 완료.</p>
+            <p class="pcard__desc t-ja">ウィッチヘーゼル・モルトエキス配合のデイリー毛穴ケアパッド。皮脂減少・毛穴引き締めを臨床実証。ノンコメドジェニックテスト済み。</p>
             <div class="pcard__foot">
               <span class="pcard__vol">125ml / 60 pads</span>
               <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
@@ -201,13 +217,14 @@
         <article class="pcard" data-cat="toner-pad">
           <div class="pcard__img">
             <img src="image/products/real_collagen_pad.jpg" alt="Real Collagen Pad" loading="lazy" />
-            <span class="pcard__cat"><span class="t-en">Toner Pad</span><span class="t-ko">토너 패드</span></span>
+            <span class="pcard__cat"><span class="t-en">Toner Pad</span><span class="t-ko">토너 패드</span><span class="t-ja">トナーパッド</span></span>
           </div>
           <div class="pcard__body">
             <p class="pcard__brand">One-day's you</p>
             <h3 class="pcard__name">Help Me! Real Collagen Pad</h3>
             <p class="pcard__desc t-en">Jelly-fit pad with 20,000ppm Collagen Extract &amp; Pomegranate. Whitening &amp; Anti-Wrinkle dual-certified. Eco-friendly biodegradable fabric.</p>
             <p class="pcard__desc t-ko">20,000ppm 콜라겐·석류 함유 젤리핏 패드. 미백·주름 개선 이중 기능성 인증. 친환경 생분해성 원단.</p>
+            <p class="pcard__desc t-ja">20,000ppmコラーゲン・ザクロ配合のジェリーフィットパッド。美白・シワ改善のダブル機能性認証。エコフレンドリーな生分解性生地。</p>
             <div class="pcard__foot">
               <span class="pcard__vol">130ml / 70 pads</span>
               <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
@@ -219,13 +236,14 @@
         <article class="pcard" data-cat="skincare">
           <div class="pcard__img">
             <img src="image/products/real_collagen_cream.jpg" alt="Real Collagen Intense Cream" loading="lazy" />
-            <span class="pcard__cat"><span class="t-en">Skincare</span><span class="t-ko">스킨케어</span></span>
+            <span class="pcard__cat"><span class="t-en">Skincare</span><span class="t-ko">스킨케어</span><span class="t-ja">スキンケア</span></span>
           </div>
           <div class="pcard__body">
             <p class="pcard__brand">One-day's you</p>
             <h3 class="pcard__name">Real Collagen Intense Cream</h3>
             <p class="pcard__desc t-en">Anti-aging lifting cream with 250,000ppm low-molecular collagen (243 Dalton), 7 peptide complex &amp; Glutathione. Stringy texture for deep skin penetration.</p>
             <p class="pcard__desc t-ko">250,000ppm 저분자 콜라겐(243달톤)·7종 펩타이드·글루타치온 함유 안티에이징 리프팅 크림. 탄력 텍스처로 깊은 피부 침투.</p>
+            <p class="pcard__desc t-ja">250,000ppm低分子コラーゲン(243ダルトン)・7種ペプチド・グルタチオン配合のアンチエイジングリフティングクリーム。糸を引くテクスチャーで肌の奥まで浸透。</p>
             <div class="pcard__foot">
               <span class="pcard__vol">30ml</span>
               <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
@@ -237,13 +255,14 @@
         <article class="pcard" data-cat="cleansing">
           <div class="pcard__img">
             <img src="image/products/cica_peeling_gel.jpg" alt="Cica:ming Peeling Gel" loading="lazy" />
-            <span class="pcard__cat"><span class="t-en">Cleansing</span><span class="t-ko">클렌징</span></span>
+            <span class="pcard__cat"><span class="t-en">Cleansing</span><span class="t-ko">클렌징</span><span class="t-ja">クレンジング</span></span>
           </div>
           <div class="pcard__body">
             <p class="pcard__brand">One-day's you</p>
             <h3 class="pcard__name">Cica:ming+ Peeling Gel</h3>
             <p class="pcard__desc t-en">Gentle exfoliating gel with 10%+ natural cellulose scrub &amp; Centella Asiatica. 60nm cellulose particles safe for the skin barrier. Hypoallergenic tested.</p>
             <p class="pcard__desc t-ko">10% 이상 천연 셀룰로오스 스크럽·센텔라 아시아티카 함유 순한 필링 젤. 60nm 셀룰로오스 입자로 피부 장벽 안전. 저자극 테스트 완료.</p>
+            <p class="pcard__desc t-ja">10%以上の天然セルローススクラブ・センテラアジアチカ配合の優しいピーリングジェル。60nmセルロース粒子で肌バリアに安全。低刺激テスト済み。</p>
             <div class="pcard__foot">
               <span class="pcard__vol">120ml</span>
               <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
@@ -254,13 +273,14 @@
         <article class="pcard" data-cat="cleansing">
           <div class="pcard__img">
             <img src="image/products/deep_cleansing_oil.jpg" alt="Deep Cleansing Oil" loading="lazy" />
-            <span class="pcard__cat"><span class="t-en">Cleansing</span><span class="t-ko">클렌징</span></span>
+            <span class="pcard__cat"><span class="t-en">Cleansing</span><span class="t-ko">클렌징</span><span class="t-ja">クレンジング</span></span>
           </div>
           <div class="pcard__body">
             <p class="pcard__brand">One-day's you</p>
             <h3 class="pcard__name">P.Z. SSG SSAG Deep Cleansing Oil</h3>
             <p class="pcard__desc t-en">89% natural vegetable oil formula. Emulsifies on contact with water to dissolve blackheads, makeup &amp; sebum. All ingredients EWG Green-rated.</p>
             <p class="pcard__desc t-ko">89% 천연 식물성 오일. 물 접촉 시 유화되어 블랙헤드·메이크업·피지 용해. 전 성분 EWG 그린 등급.</p>
+            <p class="pcard__desc t-ja">89%天然植物性オイル。水と接触すると乳化し、ブラックヘッド・メイク・皮脂を溶解。全成分EWGグリーン等級。</p>
             <div class="pcard__foot">
               <span class="pcard__vol">200ml</span>
               <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
@@ -271,13 +291,14 @@
         <article class="pcard" data-cat="cleansing">
           <div class="pcard__img">
             <img src="image/products/ssoc_blackhead.jpg" alt="SSOC SSOC Blackhead" loading="lazy" />
-            <span class="pcard__cat"><span class="t-en">Cleansing</span><span class="t-ko">클렌징</span></span>
+            <span class="pcard__cat"><span class="t-en">Cleansing</span><span class="t-ko">클렌징</span><span class="t-ja">クレンジング</span></span>
           </div>
           <div class="pcard__body">
             <p class="pcard__brand">One-day's you</p>
             <h3 class="pcard__name">P.Z. SSOC SSOC No More Blackhead</h3>
             <p class="pcard__desc t-en">30 naturally-derived ingredients dissolve blackheads in 3 steps without extractions. Witch Hazel &amp; patented BSASM. Safe for sensitive skin.</p>
             <p class="pcard__desc t-ko">30가지 천연 유래 성분으로 3단계 압출 없이 블랙헤드 용해. 위치하젤·특허 BSASM. 민감성 피부 적합.</p>
+            <p class="pcard__desc t-ja">30種の天然由来成分で3ステップ・抽出なしのブラックヘッド溶解。ウィッチヘーゼル・特許BSASM配合。敏感肌対応。</p>
             <div class="pcard__foot">
               <span class="pcard__vol">100ml</span>
               <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
@@ -289,13 +310,14 @@
         <article class="pcard" data-cat="suncare">
           <div class="pcard__img">
             <img src="image/products/sun_bb_cream.jpg" alt="Me Nyeo Cream Sun BB" loading="lazy" />
-            <span class="pcard__cat"><span class="t-en">Sun Care</span><span class="t-ko">선케어</span></span>
+            <span class="pcard__cat"><span class="t-en">Sun Care</span><span class="t-ko">선케어</span><span class="t-ja">サンケア</span></span>
           </div>
           <div class="pcard__body">
             <p class="pcard__brand">One-day's you</p>
             <h3 class="pcard__name">Me Nyeo Cream Anti-pollution Sun BB</h3>
             <p class="pcard__desc t-en">SPF50+ PA+++ triple-certified BB. Whitening, Anti-Wrinkle &amp; UV protection. Second Skin Film blocks fine dust, heavy metals &amp; pollutants.</p>
             <p class="pcard__desc t-ko">SPF50+ PA+++ 트리플 기능성 인증 BB 크림. 미백·주름 개선·자외선 차단. Second Skin Film으로 미세먼지·중금속·오염물질 차단.</p>
+            <p class="pcard__desc t-ja">SPF50+ PA+++ トリプル機能性認証BBクリーム。美白・シワ改善・紫外線カット。Second Skin Filmで微細粉塵・重金属・汚染物質を遮断。</p>
             <div class="pcard__foot">
               <span class="pcard__vol">50ml</span>
               <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
@@ -306,13 +328,14 @@
         <article class="pcard" data-cat="suncare">
           <div class="pcard__img">
             <img src="image/products/me_nyeo_cream_w.jpg" alt="Me Nyeo Cream W" loading="lazy" />
-            <span class="pcard__cat"><span class="t-en">Sun Care</span><span class="t-ko">선케어</span></span>
+            <span class="pcard__cat"><span class="t-en">Sun Care</span><span class="t-ko">선케어</span><span class="t-ja">サンケア</span></span>
           </div>
           <div class="pcard__body">
             <p class="pcard__brand">One-day's you</p>
             <h3 class="pcard__name">Me Nyeo Cream W</h3>
             <p class="pcard__desc t-en">Natural tone-up cream with Goat Milk, Niacinamide &amp; Adenosine. Dual-certified Whitening &amp; Anti-Aging. Lightweight, non-sticky multi-use formula.</p>
             <p class="pcard__desc t-ko">산양유·나이아신아마이드·아데노신 함유 내추럴 톤업 크림. 미백·안티에이징 이중 기능성 인증. 가볍고 끈적임 없는 멀티 사용 포뮬러.</p>
+            <p class="pcard__desc t-ja">山羊乳・ナイアシンアミド・アデノシン配合のナチュラルトーンアップクリーム。美白・アンチエイジングのダブル機能性認証。軽くベタつかないマルチユースフォーミュラ。</p>
             <div class="pcard__foot">
               <span class="pcard__vol">50ml</span>
               <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
@@ -329,13 +352,14 @@
         <article class="pcard" data-cat="eye-mask">
           <div class="pcard__img">
             <img src="image/products/effne_calming_eye_mask.jpg" alt="EFFNE CALMING EYE MASK" loading="lazy" />
-            <span class="pcard__cat"><span class="t-en">Eye Mask</span><span class="t-ko">아이 마스크</span></span>
+            <span class="pcard__cat"><span class="t-en">Eye Mask</span><span class="t-ko">아이 마스크</span><span class="t-ja">アイマスク</span></span>
           </div>
           <div class="pcard__body">
             <p class="pcard__brand">EFFNE</p>
             <h3 class="pcard__name">EFFNE Calming Eye Mask</h3>
             <p class="pcard__desc t-en">Hydrogel eye patch with Houttuynia Cordata Extract 10,000ppm. Soothes sensitive skin and calms irritation. Can be used around the eyes and any area that has lost elasticity.</p>
             <p class="pcard__desc t-ko">어성초 추출물 10,000ppm 함유 하이드로겔 아이 패치. 민감 피부 진정 및 트러블 완화. 눈가 외 탄력 잃은 모든 부위에 사용 가능.</p>
+            <p class="pcard__desc t-ja">ドクダミエキス10,000ppm配合のハイドロゲルアイパッチ。敏感肌の鎮静とトラブルケア。目元以外、ハリを失ったあらゆる部位に使用可能。</p>
             <div class="pcard__foot">
               <span class="pcard__vol">Houttuynia 10,000ppm</span>
               <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
@@ -346,13 +370,14 @@
         <article class="pcard" data-cat="eye-mask">
           <div class="pcard__img">
             <img src="image/products/effne_vitalizing_eye_mask.jpg" alt="EFFNE VITALIZING EYE MASK" loading="lazy" />
-            <span class="pcard__cat"><span class="t-en">Eye Mask</span><span class="t-ko">아이 마스크</span></span>
+            <span class="pcard__cat"><span class="t-en">Eye Mask</span><span class="t-ko">아이 마스크</span><span class="t-ja">アイマスク</span></span>
           </div>
           <div class="pcard__body">
             <p class="pcard__brand">EFFNE</p>
             <h3 class="pcard__name">EFFNE Vitalizing Eye Mask</h3>
             <p class="pcard__desc t-en">Brightening hydrogel patch with Retinyl Palmitate 300ppm &amp; Lemon Fruit Extract 10,000ppm. Improves skin tone and energises skin texture.</p>
             <p class="pcard__desc t-ko">레티닐팔미테이트 300ppm·레몬추출물 10,000ppm 함유. 피부 톤 개선 및 피부결 활력 케어 하이드로겔 패치.</p>
+            <p class="pcard__desc t-ja">レチニルパルミテート300ppm・レモン果実エキス10,000ppm配合。肌トーン改善＆肌の活力ケアハイドロゲルパッチ。</p>
             <div class="pcard__foot">
               <span class="pcard__vol">Retinol + Lemon 10,000ppm</span>
               <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
@@ -364,13 +389,14 @@
         <article class="pcard" data-cat="serum-pad">
           <div class="pcard__img">
             <img src="image/products/effne_vitamin_serum_pads.jpg" alt="EFFNE HYDROGEL VITAMIN SERUM PADS" loading="lazy" />
-            <span class="pcard__cat"><span class="t-en">Serum Pad</span><span class="t-ko">세럼 패드</span></span>
+            <span class="pcard__cat"><span class="t-en">Serum Pad</span><span class="t-ko">세럼 패드</span><span class="t-ja">セラムパッド</span></span>
           </div>
           <div class="pcard__body">
             <p class="pcard__brand">EFFNE</p>
             <h3 class="pcard__name">EFFNE Hydrogel Vitamin Serum Pads</h3>
             <p class="pcard__desc t-en">Hydrogel pad infused with Vitamin C (Ascorbic Acid) &amp; Collagen. Brightens skin tone, soothes redness, and repairs UV-damaged skin.</p>
             <p class="pcard__desc t-ko">비타민C(아스코르빈산)·콜라겐 함유 하이드로겔 패드. 피부 톤 개선·홍조 진정·자외선 손상 피부 회복.</p>
+            <p class="pcard__desc t-ja">ビタミンC(アスコルビン酸)・コラーゲン配合のハイドロゲルパッド。肌トーン改善・赤み鎮静・紫外線ダメージ肌の回復。</p>
             <div class="pcard__foot">
               <span class="pcard__vol">Vitamin C + Collagen</span>
               <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
@@ -381,13 +407,14 @@
         <article class="pcard" data-cat="serum-pad">
           <div class="pcard__img">
             <img src="image/products/effne_collagen_serum_pads.jpg" alt="EFFNE HYDROGEL COLLAGEN SERUM PADS" loading="lazy" />
-            <span class="pcard__cat"><span class="t-en">Serum Pad</span><span class="t-ko">세럼 패드</span></span>
+            <span class="pcard__cat"><span class="t-en">Serum Pad</span><span class="t-ko">세럼 패드</span><span class="t-ja">セラムパッド</span></span>
           </div>
           <div class="pcard__body">
             <p class="pcard__brand">EFFNE</p>
             <h3 class="pcard__name">EFFNE Hydrogel Collagen Serum Pads</h3>
             <p class="pcard__desc t-en">Cooling hydrogel pad with Hyaluronic Acid &amp; Collagen. Instantly soothes red flushed skin with a cooling sensation and deeply hydrates dry skin.</p>
             <p class="pcard__desc t-ko">히알루론산·콜라겐 함유 쿨링 하이드로겔 패드. 홍조 피부를 즉각 진정, 건조한 피부에 깊은 수분 공급.</p>
+            <p class="pcard__desc t-ja">ヒアルロン酸・コラーゲン配合のクーリングハイドロゲルパッド。赤み肌を瞬時に鎮静、乾燥肌に深い水分補給。</p>
             <div class="pcard__foot">
               <span class="pcard__vol">Hyaluronic Acid + Collagen</span>
               <span class="pcard__origin">🇰🇷 MADE IN KOREA</span>
@@ -397,7 +424,7 @@
 
       </div>
       <!-- empty state -->
-      <p class="prod-empty" id="prodEmpty"><span class="t-en">No products in this category.</span><span class="t-ko">해당 카테고리에 제품이 없습니다.</span></p>
+      <p class="prod-empty" id="prodEmpty"><span class="t-en">No products in this category.</span><span class="t-ko">해당 카테고리에 제품이 없습니다.</span><span class="t-ja">このカテゴリには製品がありません。</span></p>
     </div>
   </main>
 
@@ -405,11 +432,12 @@
   <section class="inq-strip">
     <div class="container inq-strip__inner">
       <div class="inq-strip__text">
-        <h2><span class="t-en">Looking for wholesale pricing?</span><span class="t-ko">도매 가격이 궁금하신가요?</span></h2>
+        <h2><span class="t-en">Looking for wholesale pricing?</span><span class="t-ko">도매 가격이 궁금하신가요?</span><span class="t-ja">卸売価格をお探しですか？</span></h2>
         <p class="t-en">We provide MOQ details, samples, and export documentation upon request.</p>
         <p class="t-ko">요청 시 MOQ, 샘플, 수출 서류를 제공해 드립니다.</p>
+        <p class="t-ja">ご要望に応じてMOQ、サンプル、輸出書類をご提供いたします。</p>
       </div>
-      <a href="contact.html" class="inq-btn"><span class="t-en">Send an Inquiry</span><span class="t-ko">문의하기</span> <span>→</span></a>
+      <a href="contact.html" class="inq-btn"><span class="t-en">Send an Inquiry</span><span class="t-ko">문의하기</span><span class="t-ja">お問い合わせ</span> <span>→</span></a>
     </div>
   </section>
 
@@ -418,13 +446,13 @@
     <div class="container footer__inner">
       <div class="footer__brand">
         <span class="logo"><span class="logo__hg">HG</span><span class="logo__sol">Solution</span></span>
-        <p><span class="t-en">K-Beauty Export &amp; Distribution</span><span class="t-ko">K-뷰티 수출 · 유통</span><br />에이치지솔루션 | Business Reg. 666-39-01391</p>
+        <p><span class="t-en">K-Beauty Export &amp; Distribution</span><span class="t-ko">K-뷰티 수출 · 유통</span><span class="t-ja">韓国コスメ 輸出・流通</span><br />에이치지솔루션 | Business Reg. 666-39-01391</p>
       </div>
       <div class="footer__links">
-        <a href="./#about"><span class="t-en">About</span><span class="t-ko">소개</span></a>
-        <a href="./#brands"><span class="t-en">Brands</span><span class="t-ko">브랜드</span></a>
-        <a href="products.html"><span class="t-en">Products</span><span class="t-ko">제품</span></a>
-        <a href="contact.html"><span class="t-en">Contact</span><span class="t-ko">문의</span></a>
+        <a href="./#about"><span class="t-en">About</span><span class="t-ko">소개</span><span class="t-ja">会社情報</span></a>
+        <a href="./#brands"><span class="t-en">Brands</span><span class="t-ko">브랜드</span><span class="t-ja">ブランド</span></a>
+        <a href="products.html"><span class="t-en">Products</span><span class="t-ko">제품</span><span class="t-ja">製品</span></a>
+        <a href="contact.html"><span class="t-en">Contact</span><span class="t-ko">문의</span><span class="t-ja">お問い合わせ</span></a>
       </div>
       <div class="footer__copy">
         <p>&copy; 2025 HG Solution. All rights reserved.</p>

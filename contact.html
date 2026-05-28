@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://hgsolution-global.com/contact.html" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <script>if(localStorage.getItem('hg-lang')==='ko')document.documentElement.dataset.lang='ko';</script>
+  <script>(function(){var l=localStorage.getItem('hg-lang');if(l==='ko'||l==='ja')document.documentElement.dataset.lang=l;})();</script>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="pages.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -28,14 +28,22 @@
         <span class="logo__hg">HG</span><span class="logo__sol">Solution</span>
       </a>
       <nav class="nav">
-        <a href="./#about"><span class="t-en">About</span><span class="t-ko">소개</span></a>
-        <a href="./#brands"><span class="t-en">Brands</span><span class="t-ko">브랜드</span></a>
-        <a href="products.html"><span class="t-en">Products</span><span class="t-ko">제품</span></a>
-        <a href="contact.html" class="is-active"><span class="t-en">Contact</span><span class="t-ko">문의</span></a>
+        <a href="./#about"><span class="t-en">About</span><span class="t-ko">소개</span><span class="t-ja">会社情報</span></a>
+        <a href="./#brands"><span class="t-en">Brands</span><span class="t-ko">브랜드</span><span class="t-ja">ブランド</span></a>
+        <a href="products.html"><span class="t-en">Products</span><span class="t-ko">제품</span><span class="t-ja">製品</span></a>
+        <a href="contact.html" class="is-active"><span class="t-en">Contact</span><span class="t-ko">문의</span><span class="t-ja">お問い合わせ</span></a>
       </nav>
       <div class="lang-switch">
-        <button class="lang-btn" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="ko">KO</button>
+        <button class="lang-globe" aria-label="Language" aria-haspopup="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
+          <span class="lang-current">English</span>
+          <svg class="lang-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+        </button>
+        <div class="lang-dropdown" role="menu">
+          <button class="lang-option" data-lang="en" role="menuitem">English</button>
+          <button class="lang-option" data-lang="ko" role="menuitem">한국어</button>
+          <button class="lang-option" data-lang="ja" role="menuitem">日本語</button>
+        </div>
       </div>
       <button class="nav-toggle" aria-label="menu">&#9776;</button>
     </div>
@@ -47,13 +55,15 @@
     <!-- LEFT PANEL -->
     <aside class="cp-left">
       <div class="cp-left__inner">
-        <span class="cp-eyebrow"><span class="t-en">Get in Touch</span><span class="t-ko">문의하기</span></span>
+        <span class="cp-eyebrow"><span class="t-en">Get in Touch</span><span class="t-ko">문의하기</span><span class="t-ja">お問い合わせ</span></span>
         <h1 class="cp-title">
           <span class="t-en">Let's Build<br /><em>Something<br />Together</em></span>
           <span class="t-ko">함께<br /><em>만들어<br />갑시다</em></span>
+          <span class="t-ja">共に<br /><em>新しい価値を<br />築きましょう</em></span>
         </h1>
         <p class="cp-desc t-en">Whether you're a retailer, distributor, or brand partner — we'd love to work with you.</p>
         <p class="cp-desc t-ko">리테일러, 유통사, 브랜드 파트너 누구든 환영합니다.</p>
+        <p class="cp-desc t-ja">リテーラー、ディストリビューター、ブランドパートナー、どなたでも歓迎いたします。</p>
 
         <ul class="cp-info">
           <li>
@@ -61,7 +71,7 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
             <div>
-              <span>Email</span>
+              <span><span class="t-en">Email</span><span class="t-ko">이메일</span><span class="t-ja">メール</span></span>
               <a href="mailto:hgsolution@naver.com">hgsolution@naver.com</a>
             </div>
           </li>
@@ -70,7 +80,7 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             </div>
             <div>
-              <span>Phone</span>
+              <span><span class="t-en">Phone</span><span class="t-ko">전화</span><span class="t-ja">電話</span></span>
               <a href="tel:+82328658127">+82 32 865 8127</a>
             </div>
           </li>
@@ -79,16 +89,16 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <div>
-              <span>Address</span>
+              <span><span class="t-en">Address</span><span class="t-ko">주소</span><span class="t-ja">住所</span></span>
               <a>4F, Medical Center, 586 Cheongneung-daero,<br />Namdong-gu, Incheon, South Korea</a>
             </div>
           </li>
         </ul>
 
         <div class="cp-note">
-          <p>⟡ &nbsp;<span class="t-en">Response within 1–2 business days</span><span class="t-ko">1~2 영업일 내 답변</span></p>
-          <p>⟡ &nbsp;<span class="t-en">Samples available upon request</span><span class="t-ko">요청 시 샘플 제공</span></p>
-          <p>⟡ &nbsp;<span class="t-en">MOQ &amp; pricing info on inquiry</span><span class="t-ko">MOQ · 가격 정보는 문의 시 안내</span></p>
+          <p>⟡ &nbsp;<span class="t-en">Response within 1–2 business days</span><span class="t-ko">1~2 영업일 내 답변</span><span class="t-ja">1〜2営業日以内にご返信</span></p>
+          <p>⟡ &nbsp;<span class="t-en">Samples available upon request</span><span class="t-ko">요청 시 샘플 제공</span><span class="t-ja">ご要望に応じてサンプルご提供</span></p>
+          <p>⟡ &nbsp;<span class="t-en">MOQ &amp; pricing info on inquiry</span><span class="t-ko">MOQ · 가격 정보는 문의 시 안내</span><span class="t-ja">MOQ・価格情報はお問い合わせ時にご案内</span></p>
         </div>
       </div>
     </aside>
@@ -96,31 +106,33 @@
     <!-- RIGHT PANEL -->
     <section class="cp-right">
       <div class="cp-right__inner">
-        <h2 class="cp-form-title"><span class="t-en">Send an Inquiry</span><span class="t-ko">문의 보내기</span></h2>
+        <h2 class="cp-form-title"><span class="t-en">Send an Inquiry</span><span class="t-ko">문의 보내기</span><span class="t-ja">お問い合わせを送信</span></h2>
         <p class="cp-form-sub t-en">Fill in the form below and our team will get back to you shortly.</p>
         <p class="cp-form-sub t-ko">아래 양식을 작성해 주시면 담당자가 곧 연락드리겠습니다.</p>
+        <p class="cp-form-sub t-ja">下記フォームにご記入いただければ、担当者よりご連絡いたします。</p>
 
         <form class="cp-form" id="contactForm" action="https://formspree.io/f/mdajypob" method="POST">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
           <div class="cp-row">
             <div class="cp-field">
-              <label for="name"><span class="t-en">Full Name</span><span class="t-ko">이름</span> <span>*</span></label>
-              <input type="text" id="name" name="name" data-ph-en="John Smith" data-ph-ko="홍길동" placeholder="John Smith" required />
+              <label for="name"><span class="t-en">Full Name</span><span class="t-ko">이름</span><span class="t-ja">お名前</span> <span>*</span></label>
+              <input type="text" id="name" name="name" data-ph-en="John Smith" data-ph-ko="홍길동" data-ph-ja="山田太郎" placeholder="John Smith" required />
             </div>
             <div class="cp-field">
-              <label for="company"><span class="t-en">Company</span><span class="t-ko">회사명</span></label>
-              <input type="text" id="company" name="company" data-ph-en="Your company" data-ph-ko="회사명 입력" placeholder="Your company" />
+              <label for="company"><span class="t-en">Company</span><span class="t-ko">회사명</span><span class="t-ja">会社名</span></label>
+              <input type="text" id="company" name="company" data-ph-en="Your company" data-ph-ko="회사명 입력" data-ph-ja="御社名" placeholder="Your company" />
             </div>
           </div>
 
           <div class="cp-field">
-            <label for="email"><span class="t-en">Email Address</span><span class="t-ko">이메일 주소</span> <span>*</span></label>
-            <input type="email" id="email" name="email" data-ph-en="john@example.com" data-ph-ko="이메일 입력" placeholder="john@example.com" required />
+            <label for="email"><span class="t-en">Email Address</span><span class="t-ko">이메일 주소</span><span class="t-ja">メールアドレス</span> <span>*</span></label>
+            <input type="email" id="email" name="email" data-ph-en="john@example.com" data-ph-ko="이메일 입력" data-ph-ja="your@email.com" placeholder="john@example.com" required />
           </div>
 
           <div class="cp-field">
-            <label for="country"><span class="t-en">Country</span><span class="t-ko">국가</span> <span>*</span></label>
+            <label for="country"><span class="t-en">Country</span><span class="t-ko">국가</span><span class="t-ja">国</span> <span>*</span></label>
             <div class="cp-select-wrap">
-              <select id="country" name="country" required data-ph-en="Select your country..." data-ph-ko="국가를 선택하세요...">
+              <select id="country" name="country" required data-ph-en="Select your country..." data-ph-ko="국가를 선택하세요..." data-ph-ja="国を選択してください...">
                 <option value="">Select your country...</option>
                 <optgroup label="Asia Pacific">
                   <option value="CN">China</option>
@@ -170,15 +182,15 @@
           </div>
 
           <div class="cp-field">
-            <label for="message"><span class="t-en">Message</span><span class="t-ko">문의 내용</span> <span>*</span></label>
-            <textarea id="message" name="message" rows="5" data-ph-en="Tell us about your business and what products you're interested in..." data-ph-ko="사업 내용과 관심 제품을 알려주세요..." placeholder="Tell us about your business and what products you're interested in..." required></textarea>
+            <label for="message"><span class="t-en">Message</span><span class="t-ko">문의 내용</span><span class="t-ja">メッセージ</span> <span>*</span></label>
+            <textarea id="message" name="message" rows="5" data-ph-en="Tell us about your business and what products you're interested in..." data-ph-ko="사업 내용과 관심 제품을 알려주세요..." data-ph-ja="ご事業内容と関心のある製品をお聞かせください..." placeholder="Tell us about your business and what products you're interested in..." required></textarea>
           </div>
 
           <button type="submit" class="cp-submit" id="submitBtn">
-            <span id="submitText"><span class="t-en">Send Inquiry</span><span class="t-ko">문의 보내기</span></span>
+            <span id="submitText"><span class="t-en">Send Inquiry</span><span class="t-ko">문의 보내기</span><span class="t-ja">お問い合わせを送信</span></span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </button>
-          <p class="cp-privacy"><span class="t-en">Your information is kept strictly confidential and never shared with third parties.</span><span class="t-ko">입력하신 정보는 철저히 보호되며 제3자에게 공유되지 않습니다.</span></p>
+          <p class="cp-privacy"><span class="t-en">Your information is kept strictly confidential and never shared with third parties.</span><span class="t-ko">입력하신 정보는 철저히 보호되며 제3자에게 공유되지 않습니다.</span><span class="t-ja">ご入力いただいた情報は厳重に管理され、第三者に共有されることはありません。</span></p>
         </form>
       </div>
     </section>
@@ -190,13 +202,13 @@
     <div class="container footer__inner">
       <div class="footer__brand">
         <span class="logo"><span class="logo__hg">HG</span><span class="logo__sol">Solution</span></span>
-        <p><span class="t-en">K-Beauty Export &amp; Distribution</span><span class="t-ko">K-뷰티 수출 · 유통</span><br />에이치지솔루션 | Business Reg. 666-39-01391</p>
+        <p><span class="t-en">K-Beauty Export &amp; Distribution</span><span class="t-ko">K-뷰티 수출 · 유통</span><span class="t-ja">韓国コスメ 輸出・流通</span><br />에이치지솔루션 | Business Reg. 666-39-01391</p>
       </div>
       <div class="footer__links">
-        <a href="./#about"><span class="t-en">About</span><span class="t-ko">소개</span></a>
-        <a href="./#brands"><span class="t-en">Brands</span><span class="t-ko">브랜드</span></a>
-        <a href="products.html"><span class="t-en">Products</span><span class="t-ko">제품</span></a>
-        <a href="contact.html"><span class="t-en">Contact</span><span class="t-ko">문의</span></a>
+        <a href="./#about"><span class="t-en">About</span><span class="t-ko">소개</span><span class="t-ja">会社情報</span></a>
+        <a href="./#brands"><span class="t-en">Brands</span><span class="t-ko">브랜드</span><span class="t-ja">ブランド</span></a>
+        <a href="products.html"><span class="t-en">Products</span><span class="t-ko">제품</span><span class="t-ja">製品</span></a>
+        <a href="contact.html"><span class="t-en">Contact</span><span class="t-ko">문의</span><span class="t-ja">お問い合わせ</span></a>
       </div>
       <div class="footer__copy">
         <p>&copy; 2025 HG Solution. All rights reserved.</p>
@@ -206,8 +218,33 @@
 
   <script src="main.js"></script>
   <script>
+    const I18N = {
+      en: {
+        title: 'Inquiry Received!',
+        body: 'Thank you for contacting HG Solution.<br />Our team will review your message and get back to you<br /><strong style="color:#2d5a3d;">within 1–2 business days.</strong>',
+        sending: 'Sending...',
+        error: 'Something went wrong — try again',
+        netError: 'Network error — try again',
+      },
+      ko: {
+        title: '문의가 접수되었습니다!',
+        body: 'HG Solution에 문의해 주셔서 감사합니다.<br />담당자가 확인 후<br /><strong style="color:#2d5a3d;">1~2 영업일 내에 연락드리겠습니다.</strong>',
+        sending: '전송 중...',
+        error: '오류가 발생했습니다 — 다시 시도해 주세요',
+        netError: '네트워크 오류 — 다시 시도해 주세요',
+      },
+      ja: {
+        title: 'お問い合わせを受け付けました！',
+        body: 'HG Solutionにお問い合わせいただきありがとうございます。<br />担当者にて確認後、<br /><strong style="color:#2d5a3d;">1~2営業日以内にご返信いたします。</strong>',
+        sending: '送信中...',
+        error: 'エラーが発生しました — 再度お試しください',
+        netError: 'ネットワークエラー — 再度お試しください',
+      },
+    };
+    function getT() { return I18N[document.documentElement.dataset.lang] || I18N.en; }
+
     function showSuccess(form) {
-      const ko = document.documentElement.dataset.lang === 'ko';
+      const t = getT();
       form.innerHTML = `
         <div style="
           text-align:center;
@@ -225,13 +262,10 @@
             font-size:28px;color:#fff;
           ">✓</div>
           <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;color:#1a1a1a;margin-bottom:14px;">
-            ${ko ? '문의가 접수되었습니다!' : 'Inquiry Received!'}
+            ${t.title}
           </h3>
           <p style="color:#6b6b6b;font-size:0.92rem;line-height:1.8;margin:0;">
-            ${ko
-              ? 'HG Solution에 문의해 주셔서 감사합니다.<br />담당자가 확인 후<br /><strong style="color:#2d5a3d;">1~2 영업일 내에 연락드리겠습니다.</strong>'
-              : 'Thank you for contacting HG Solution.<br />Our team will review your message and get back to you<br /><strong style="color:#2d5a3d;">within 1–2 business days.</strong>'
-            }
+            ${t.body}
           </p>
         </div>`;
     }
@@ -244,8 +278,8 @@
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
         btn.disabled = true;
-        const ko = document.documentElement.dataset.lang === 'ko';
-        txt.innerHTML = ko ? '<span>전송 중...</span>' : '<span>Sending...</span>';
+        const t = getT();
+        txt.innerHTML = `<span>${t.sending}</span>`;
         try {
           const res = await fetch(form.action, {
             method: 'POST',
@@ -255,15 +289,11 @@
           if (res.ok) {
             showSuccess(form);
           } else {
-            txt.innerHTML = ko
-              ? '<span>오류가 발생했습니다 — 다시 시도해 주세요</span>'
-              : '<span>Something went wrong — try again</span>';
+            txt.innerHTML = `<span>${t.error}</span>`;
             btn.disabled = false;
           }
         } catch {
-          txt.innerHTML = ko
-            ? '<span>네트워크 오류 — 다시 시도해 주세요</span>'
-            : '<span>Network error — try again</span>';
+          txt.innerHTML = `<span>${t.netError}</span>`;
           btn.disabled = false;
         }
       });

@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="https://hgsolution-global.com/" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <script>if(localStorage.getItem('hg-lang')==='ko')document.documentElement.dataset.lang='ko';</script>
+  <script>(function(){var l=localStorage.getItem('hg-lang');if(l==='ko'||l==='ja')document.documentElement.dataset.lang=l;})();</script>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
@@ -27,14 +27,22 @@
         <span class="logo__hg">HG</span><span class="logo__sol">Solution</span>
       </a>
       <nav class="nav">
-        <a href="#about"><span class="t-en">About</span><span class="t-ko">소개</span></a>
-        <a href="#brands"><span class="t-en">Brands</span><span class="t-ko">브랜드</span></a>
-        <a href="products.html"><span class="t-en">Products</span><span class="t-ko">제품</span></a>
-        <a href="contact.html"><span class="t-en">Contact</span><span class="t-ko">문의</span></a>
+        <a href="#about"><span class="t-en">About</span><span class="t-ko">소개</span><span class="t-ja">会社情報</span></a>
+        <a href="#brands"><span class="t-en">Brands</span><span class="t-ko">브랜드</span><span class="t-ja">ブランド</span></a>
+        <a href="products.html"><span class="t-en">Products</span><span class="t-ko">제품</span><span class="t-ja">製品</span></a>
+        <a href="contact.html"><span class="t-en">Contact</span><span class="t-ko">문의</span><span class="t-ja">お問い合わせ</span></a>
       </nav>
       <div class="lang-switch">
-        <button class="lang-btn" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="ko">KO</button>
+        <button class="lang-globe" aria-label="Language" aria-haspopup="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg>
+          <span class="lang-current">English</span>
+          <svg class="lang-chevron" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 4l4 4 4-4"/></svg>
+        </button>
+        <div class="lang-dropdown" role="menu">
+          <button class="lang-option" data-lang="en" role="menuitem">English</button>
+          <button class="lang-option" data-lang="ko" role="menuitem">한국어</button>
+          <button class="lang-option" data-lang="ja" role="menuitem">日本語</button>
+        </div>
       </div>
       <button class="nav-toggle" aria-label="menu">&#9776;</button>
     </div>
@@ -47,10 +55,11 @@
       <div class="hero__overlay"></div>
     </div>
     <div class="hero__content">
-      <p class="hero__eyebrow"><span class="t-en">K-Beauty Export &amp; Distribution</span><span class="t-ko">K-뷰티 수출 · 유통</span></p>
+      <p class="hero__eyebrow"><span class="t-en">K-Beauty Export &amp; Distribution</span><span class="t-ko">K-뷰티 수출 · 유통</span><span class="t-ja">韓国コスメ 輸出・流通</span></p>
       <h1 class="hero__title">
         <span class="t-en">The Best of<br />Korean Beauty,<br />Delivered Worldwide.</span>
         <span class="t-ko">한국 뷰티의 정수를<br />전 세계로.</span>
+        <span class="t-ja">韓国ビューティーの真髄を、<br />世界へお届け。</span>
       </h1>
       <p class="hero__sub t-en">
         HG Solution connects global markets with premium, certified K-Beauty brands directly from Korea.
@@ -58,9 +67,12 @@
       <p class="hero__sub t-ko">
         HG Solution은 세계 각국의 파트너에게 프리미엄 인증 K-뷰티 브랜드를 직접 연결합니다.
       </p>
+      <p class="hero__sub t-ja">
+        HG Solutionは、認証済みのプレミアム韓国コスメブランドを世界のパートナーへ直接お繋ぎします。
+      </p>
       <div class="hero__cta">
-        <a href="products.html" class="btn btn--primary"><span class="t-en">Explore Products</span><span class="t-ko">제품 보기</span></a>
-        <a href="#contact" class="btn btn--outline"><span class="t-en">Get in Touch</span><span class="t-ko">문의하기</span></a>
+        <a href="products.html" class="btn btn--primary"><span class="t-en">Explore Products</span><span class="t-ko">제품 보기</span><span class="t-ja">製品を見る</span></a>
+        <a href="#contact" class="btn btn--outline"><span class="t-en">Get in Touch</span><span class="t-ko">문의하기</span><span class="t-ja">お問い合わせ</span></a>
       </div>
     </div>
   </section>
@@ -72,13 +84,16 @@
         <img src="image/mood.png" alt="K-Beauty products" />
       </div>
       <div class="about__text">
-        <p class="label"><span class="t-en">About Us</span><span class="t-ko">회사 소개</span></p>
-        <h2><span class="t-en">Your Trusted Gateway<br />to Korean Beauty</span><span class="t-ko">한국 뷰티의<br />신뢰할 수 있는 파트너</span></h2>
+        <p class="label"><span class="t-en">About Us</span><span class="t-ko">회사 소개</span><span class="t-ja">会社情報</span></p>
+        <h2><span class="t-en">Your Trusted Gateway<br />to Korean Beauty</span><span class="t-ko">한국 뷰티의<br />신뢰할 수 있는 파트너</span><span class="t-ja">信頼できる<br />韓国コスメのパートナー</span></h2>
         <p class="t-en">
           HG Solution is a Korea-based K-Beauty export and distribution company, founded in 2025. We specialize in sourcing and supplying premium Korean skincare and cosmetics to global buyers, retailers, and distributors.
         </p>
         <p class="t-ko">
           HG Solution은 2025년 설립된 한국 기반 K-뷰티 수출·유통 전문 기업입니다. 글로벌 바이어, 리테일러, 유통사에 프리미엄 한국 스킨케어와 화장품을 공급합니다.
+        </p>
+        <p class="t-ja">
+          HG Solutionは、2025年設立の韓国を拠点とする韓国コスメ輸出・流通の専門企業です。グローバルバイヤー、リテーラー、ディストリビューターに、プレミアム韓国スキンケア・化粧品を供給しています。
         </p>
         <p class="t-en">
           With deep roots in the Korean beauty industry, we partner exclusively with brands that meet the highest standards of formulation, safety certification, and market appeal. Our mission is to make authentic K-Beauty accessible to every corner of the world.
@@ -86,10 +101,13 @@
         <p class="t-ko">
           한국 뷰티 산업에 깊이 뿌리를 두고, 성분·안전 인증·시장성 기준을 충족하는 브랜드와만 파트너십을 맺습니다. 진정한 K-뷰티를 세계 곳곳에 전달하는 것이 저희의 사명입니다.
         </p>
+        <p class="t-ja">
+          韓国コスメ業界に深く根ざし、成分・安全認証・市場性の基準を満たすブランドのみとパートナーシップを結んでいます。本物の韓国コスメを世界中にお届けすることが私たちの使命です。
+        </p>
         <ul class="about__stats">
-          <li><strong>MADE IN KOREA</strong><span class="t-en">All products sourced &amp; certified</span><span class="t-ko">전 제품 국내 생산 및 인증</span></li>
-          <li><strong><span class="t-en">Global Export</span><span class="t-ko">글로벌 수출</span></strong><span class="t-en">Worldwide B2B distribution</span><span class="t-ko">전 세계 B2B 유통</span></li>
-          <li><strong>Est. 2025</strong><span class="t-en">Incheon, South Korea</span><span class="t-ko">인천, 대한민국</span></li>
+          <li><strong>MADE IN KOREA</strong><span class="t-en">All products sourced &amp; certified</span><span class="t-ko">전 제품 국내 생산 및 인증</span><span class="t-ja">全製品 韓国製・認証取得</span></li>
+          <li><strong><span class="t-en">Global Export</span><span class="t-ko">글로벌 수출</span><span class="t-ja">グローバル輸出</span></strong><span class="t-en">Worldwide B2B distribution</span><span class="t-ko">전 세계 B2B 유통</span><span class="t-ja">世界規模のB2B流通</span></li>
+          <li><strong>Est. 2025</strong><span class="t-en">Incheon, South Korea</span><span class="t-ko">인천, 대한민국</span><span class="t-ja">韓国・仁川</span></li>
         </ul>
       </div>
     </div>
@@ -98,8 +116,8 @@
   <!-- ===== BRAND ===== -->
   <section class="brand section" id="brands">
     <div class="container">
-      <p class="label label--center"><span class="t-en">Brand Partners</span><span class="t-ko">브랜드 파트너</span></p>
-      <h2 class="text-center"><span class="t-en">Our Brands</span><span class="t-ko">취급 브랜드</span></h2>
+      <p class="label label--center"><span class="t-en">Brand Partners</span><span class="t-ko">브랜드 파트너</span><span class="t-ja">ブランドパートナー</span></p>
+      <h2 class="text-center"><span class="t-en">Our Brands</span><span class="t-ko">취급 브랜드</span><span class="t-ja">取扱ブランド</span></h2>
       <div class="brand__grid">
 
         <!-- One-day's you -->
@@ -107,12 +125,13 @@
           <p class="brand-card__name">One-day's you</p>
           <p class="brand-card__sub t-en">A leading Korean skincare brand trusted by millions — formulated with clinically-tested, natural ingredients for everyday skin wellness.</p>
           <p class="brand-card__sub t-ko">수백만 명이 신뢰하는 프리미엄 한국 스킨케어 브랜드 — 임상 검증된 천연 성분으로 매일의 피부 건강을 위해 설계되었습니다.</p>
+          <p class="brand-card__sub t-ja">数百万人に愛されるプレミアム韓国スキンケアブランド — 臨床試験済みの天然成分で、日々の肌の健康をサポート。</p>
           <div class="brand__tags">
-            <span><span class="t-en">Sheet Masks</span><span class="t-ko">시트 마스크</span></span>
-            <span><span class="t-en">Toner Pads</span><span class="t-ko">토너 패드</span></span>
-            <span><span class="t-en">Skincare</span><span class="t-ko">스킨케어</span></span>
-            <span><span class="t-en">Cleansing</span><span class="t-ko">클렌징</span></span>
-            <span><span class="t-en">Sun Care</span><span class="t-ko">선케어</span></span>
+            <span><span class="t-en">Sheet Masks</span><span class="t-ko">시트 마스크</span><span class="t-ja">シートマスク</span></span>
+            <span><span class="t-en">Toner Pads</span><span class="t-ko">토너 패드</span><span class="t-ja">トナーパッド</span></span>
+            <span><span class="t-en">Skincare</span><span class="t-ko">스킨케어</span><span class="t-ja">スキンケア</span></span>
+            <span><span class="t-en">Cleansing</span><span class="t-ko">클렌징</span><span class="t-ja">クレンジング</span></span>
+            <span><span class="t-en">Sun Care</span><span class="t-ko">선케어</span><span class="t-ja">サンケア</span></span>
           </div>
         </div>
 
@@ -120,12 +139,14 @@
         <div class="brand-card">
           <p class="brand-card__maker t-en">by lalafactory</p>
           <p class="brand-card__maker t-ko">by 라라팩토리</p>
+          <p class="brand-card__maker t-ja">by ララファクトリー</p>
           <p class="brand-card__name">EFFNE</p>
           <p class="brand-card__sub t-en">Technical skincare built on healthy beauty — minimal routines, skin-friendly natural ingredients, and clinically proven results.</p>
           <p class="brand-card__sub t-ko">건강에서 찾은 뷰티 철학 — 최소한의 루틴, 피부 친화적 천연 성분, 임상으로 검증된 결과.</p>
+          <p class="brand-card__sub t-ja">健康から見出した美の哲学 — ミニマルなルーチン、肌にやさしい天然成分、臨床で実証された効果。</p>
           <div class="brand__tags">
-            <span><span class="t-en">Eye Masks</span><span class="t-ko">아이 마스크</span></span>
-            <span><span class="t-en">Serum Pads</span><span class="t-ko">세럼 패드</span></span>
+            <span><span class="t-en">Eye Masks</span><span class="t-ko">아이 마스크</span><span class="t-ja">アイマスク</span></span>
+            <span><span class="t-en">Serum Pads</span><span class="t-ko">세럼 패드</span><span class="t-ja">セラムパッド</span></span>
           </div>
         </div>
 
@@ -136,14 +157,15 @@
   <!-- ===== PRODUCTS ===== -->
   <section class="products section" id="products">
     <div class="container">
-      <p class="label label--center"><span class="t-en">Product Lineup</span><span class="t-ko">제품 라인업</span></p>
-      <h2 class="text-center"><span class="t-en">Featured Products</span><span class="t-ko">주요 제품</span></h2>
+      <p class="label label--center"><span class="t-en">Product Lineup</span><span class="t-ko">제품 라인업</span><span class="t-ja">製品ラインナップ</span></p>
+      <h2 class="text-center"><span class="t-en">Featured Products</span><span class="t-ko">주요 제품</span><span class="t-ja">主力製品</span></h2>
       <p class="section__sub text-center t-en">Premium Korean skincare from One-day's you &amp; EFFNE, available for B2B wholesale &amp; export.</p>
       <p class="section__sub text-center t-ko">One-day's you &amp; EFFNE 프리미엄 한국 스킨케어 — B2B 도매 및 수출 가능.</p>
+      <p class="section__sub text-center t-ja">One-day's you &amp; EFFNEのプレミアム韓国スキンケア — B2B卸売・輸出対応。</p>
 
       <!-- Sheet Masks -->
       <div class="products__category">
-        <h3 class="category__title"><span class="t-en">Sheet Masks</span><span class="t-ko">시트 마스크</span></h3>
+        <h3 class="category__title"><span class="t-en">Sheet Masks</span><span class="t-ko">시트 마스크</span><span class="t-ja">シートマスク</span></h3>
         <div class="products__grid">
           <div class="product-card">
             <div class="product-card__img">
@@ -154,6 +176,7 @@
               <h4>Cica:ming 30 Days Mask</h4>
               <p class="t-en">Daily soothing sheet mask with Centella Asiatica. 30 sheets per container. Strengthens skin barrier with gentle calming ingredients.</p>
               <p class="t-ko">센텔라 아시아티카 함유 데일리 진정 시트 마스크. 30매입. 5가지 진정 성분으로 피부 장벽을 강화합니다.</p>
+              <p class="t-ja">センテラアジアチカ配合のデイリー鎮静シートマスク。30枚入り。5種の鎮静成分で肌バリアを強化。</p>
               <span class="product-card__qty">310ml / 30 sheets &nbsp;|&nbsp; MADE IN KOREA</span>
             </div>
           </div>
@@ -166,6 +189,7 @@
               <h4>Collagen 30 Days Mask</h4>
               <p class="t-en">Elasticity-boosting daily mask with Hydrolyzed Collagen, Elastin &amp; Hyaluronic Acid. Whitening &amp; Anti-Wrinkle dual function.</p>
               <p class="t-ko">가수분해 콜라겐·엘라스틴·히알루론산 함유 탄력 충전 데일리 마스크. 미백·주름 개선 이중 기능성 인증.</p>
+              <p class="t-ja">加水分解コラーゲン・エラスチン・ヒアルロン酸配合のハリ充填デイリーマスク。美白・シワ改善のダブル機能性認証。</p>
               <span class="product-card__qty">310ml / 30 sheets &nbsp;|&nbsp; MADE IN KOREA</span>
             </div>
           </div>
@@ -178,6 +202,7 @@
               <h4>Oh! So Cool Calming Mask</h4>
               <p class="t-en">Instant cooling &amp; soothing facial mask with natural botanical extracts. Reduces skin temperature while delivering deep hydration.</p>
               <p class="t-ko">천연 식물성 추출물 함유 즉각 쿨링·진정 마스크. 피부 온도를 낮추며 깊은 수분을 공급합니다.</p>
+              <p class="t-ja">天然植物エキス配合の即時クーリング・鎮静マスク。肌温度を下げながら深い水分を供給。</p>
               <span class="product-card__qty">25ml × 5pcs &nbsp;|&nbsp; MADE IN KOREA</span>
             </div>
           </div>
@@ -186,7 +211,7 @@
 
       <!-- Toner Pads -->
       <div class="products__category">
-        <h3 class="category__title"><span class="t-en">Toner Pads</span><span class="t-ko">토너 패드</span></h3>
+        <h3 class="category__title"><span class="t-en">Toner Pads</span><span class="t-ko">토너 패드</span><span class="t-ja">トナーパッド</span></h3>
         <div class="products__grid">
           <div class="product-card">
             <div class="product-card__img">
@@ -197,6 +222,7 @@
               <h4>Help Me! Dacto Pad</h4>
               <p class="t-en">Hypoallergenic daily toner pad for hydration &amp; gentle exfoliation with 8 types of Hyaluronic Acid and patented BSASM ingredients.</p>
               <p class="t-ko">8중 히알루론산·특허 BSASM 함유 저자극 데일리 토너 패드. 수분 공급과 부드러운 각질 제거.</p>
+              <p class="t-ja">8種ヒアルロン酸・特許BSASM配合の低刺激デイリートナーパッド。水分補給と優しい角質ケア。</p>
               <span class="product-card__qty">125ml / 60 pads &nbsp;|&nbsp; MADE IN KOREA</span>
             </div>
           </div>
@@ -209,6 +235,7 @@
               <h4>Help Me! Eco-Intense Ceramide Ampoule Pad</h4>
               <p class="t-en">Naturally-derived ceramide ampoule pad with patented 3D Air Mesh Lotus technology. Strengthens skin barrier &amp; locks in moisture.</p>
               <p class="t-ko">천연 유래 세라마이드 앰플 패드. 특허 3D Air Mesh Lotus 기술로 피부 장벽을 강화하고 수분을 지속시킵니다.</p>
+              <p class="t-ja">天然由来セラミドアンプルパッド。特許3D Air Mesh Lotus技術で肌バリアを強化し水分を持続。</p>
               <span class="product-card__qty">160ml / 90 pads &nbsp;|&nbsp; MADE IN KOREA</span>
             </div>
           </div>
@@ -221,6 +248,7 @@
               <h4>Help Me! Ice Cooling Pad</h4>
               <p class="t-en">Instant-cooling toner pad clinically proven to reduce skin temperature. Packed with Aquaxyl &amp; moisture-enhancing patented ingredients.</p>
               <p class="t-ko">임상 입증 즉각 쿨링 토너 패드. Aquaxyl 및 특허 보습 성분으로 민감해진 피부를 진정·보습합니다.</p>
+              <p class="t-ja">臨床実証の即時クーリングトナーパッド。Aquaxyl・特許保湿成分で敏感肌を鎮静・保湿。</p>
               <span class="product-card__qty">110ml / 80 pads &nbsp;|&nbsp; MADE IN KOREA</span>
             </div>
           </div>
@@ -233,6 +261,7 @@
               <h4>Help Me! Pore-T Pad</h4>
               <p class="t-en">Daily pore-care toner pad with Witch Hazel &amp; Malt Extract. Clinically proven to reduce sebum &amp; tighten pores. Safe for sensitive skin.</p>
               <p class="t-ko">위치하젤·맥아 추출물 함유 데일리 모공 케어 패드. 임상 입증 피지 감소·모공 축소 효과. 민감성 피부 적합.</p>
+              <p class="t-ja">ウィッチヘーゼル・モルトエキス配合のデイリー毛穴ケアパッド。皮脂減少・毛穴引き締めを臨床実証。敏感肌対応。</p>
               <span class="product-card__qty">125ml / 60 pads &nbsp;|&nbsp; MADE IN KOREA</span>
             </div>
           </div>
@@ -245,6 +274,7 @@
               <h4>Help Me! Real Collagen Pad</h4>
               <p class="t-en">Jelly-fit collagen pad with 20,000ppm Collagen Extract &amp; Pomegranate. Whitening &amp; Anti-Wrinkle dual function. Biodegradable fabric.</p>
               <p class="t-ko">20,000ppm 콜라겐·석류 추출물 함유 젤리핏 패드. 미백·주름 개선 이중 기능성. 생분해성 원단 사용.</p>
+              <p class="t-ja">20,000ppmコラーゲン・ザクロエキス配合のジェリーフィットパッド。美白・シワ改善のダブル機能性。生分解性生地使用。</p>
               <span class="product-card__qty">130ml / 70 pads &nbsp;|&nbsp; MADE IN KOREA</span>
             </div>
           </div>
@@ -253,7 +283,7 @@
 
       <!-- Skincare & Cleansing -->
       <div class="products__category">
-        <h3 class="category__title"><span class="t-en">Skincare &amp; Cleansing</span><span class="t-ko">스킨케어 &amp; 클렌징</span></h3>
+        <h3 class="category__title"><span class="t-en">Skincare &amp; Cleansing</span><span class="t-ko">스킨케어 &amp; 클렌징</span><span class="t-ja">スキンケア &amp; クレンジング</span></h3>
         <div class="products__grid">
           <div class="product-card">
             <div class="product-card__img">
@@ -264,6 +294,7 @@
               <h4>Real Collagen Intense Cream</h4>
               <p class="t-en">Anti-aging intensive cream with 243 Dalton low-molecular collagen (250,000ppm), 7 types of peptide complex &amp; Glutathione.</p>
               <p class="t-ko">243달톤 저분자 콜라겐(250,000ppm)·7종 펩타이드·글루타치온 함유 고농도 안티에이징 크림.</p>
+              <p class="t-ja">243ダルトン低分子コラーゲン(250,000ppm)・7種ペプチド・グルタチオン配合の高濃度アンチエイジングクリーム。</p>
               <span class="product-card__qty">30ml &nbsp;|&nbsp; MADE IN KOREA</span>
             </div>
           </div>
@@ -276,6 +307,7 @@
               <h4>Cica:ming+ Peeling Gel</h4>
               <p class="t-en">Gentle peeling gel with 10%+ natural cellulose scrub, Centella Asiatica &amp; Tea Tree extract. Hypoallergenic tested. Removes dead skin softly.</p>
               <p class="t-ko">10% 이상 천연 셀룰로오스 스크럽·센텔라 아시아티카·티트리 추출물 함유 저자극 필링 젤. 각질을 부드럽게 제거합니다.</p>
+              <p class="t-ja">10%以上の天然セルローススクラブ・センテラアジアチカ・ティーツリーエキス配合の低刺激ピーリングジェル。古い角質を優しくケア。</p>
               <span class="product-card__qty">120ml &nbsp;|&nbsp; MADE IN KOREA</span>
             </div>
           </div>
@@ -288,6 +320,7 @@
               <h4>P.Z. SSG SSAG Deep Cleansing Oil</h4>
               <p class="t-en">89% natural vegetable oil cleanser. Melts blackheads, makeup &amp; impurities without stripping moisture. EWG Green-rated formula.</p>
               <p class="t-ko">89% 천연 식물성 오일 클렌저. 블랙헤드·메이크업·노폐물을 수분 손상 없이 녹여냅니다. 전 성분 EWG 그린 등급.</p>
+              <p class="t-ja">89%天然植物性オイルクレンザー。ブラックヘッド・メイク・汚れを水分を奪わずに溶解。全成分EWGグリーン等級。</p>
               <span class="product-card__qty">200ml &nbsp;|&nbsp; MADE IN KOREA</span>
             </div>
           </div>
@@ -300,6 +333,7 @@
               <h4>P.Z. SSOC SSOC No More Blackhead</h4>
               <p class="t-en">30 naturally-derived ingredients to dissolve blackheads without extractions. Patented BSASM &amp; Witch Hazel. Safe for sensitive skin.</p>
               <p class="t-ko">30가지 천연 유래 성분으로 압출 없이 블랙헤드를 용해합니다. 특허 BSASM·위치하젤 함유. 민감성 피부 적합.</p>
+              <p class="t-ja">30種の天然由来成分で抽出なしにブラックヘッドを溶解。特許BSASM・ウィッチヘーゼル配合。敏感肌対応。</p>
               <span class="product-card__qty">100ml &nbsp;|&nbsp; MADE IN KOREA</span>
             </div>
           </div>
@@ -308,7 +342,7 @@
 
       <!-- Sun Care & BB -->
       <div class="products__category">
-        <h3 class="category__title"><span class="t-en">Sun Care &amp; Tone-up</span><span class="t-ko">선케어 &amp; 톤업</span></h3>
+        <h3 class="category__title"><span class="t-en">Sun Care &amp; Tone-up</span><span class="t-ko">선케어 &amp; 톤업</span><span class="t-ja">サンケア &amp; トーンアップ</span></h3>
         <div class="products__grid">
           <div class="product-card">
             <div class="product-card__img">
@@ -319,6 +353,7 @@
               <h4>Me Nyeo Cream Anti-pollution Sun BB</h4>
               <p class="t-en">SPF50+ PA+++ triple-function BB cream. Whitening, anti-wrinkle &amp; UV protection. Blocks fine dust &amp; pollutants with Second Skin Film.</p>
               <p class="t-ko">SPF50+ PA+++ 트리플 기능성 BB 크림. 미백·주름 개선·자외선 차단. Second Skin Film으로 미세먼지·오염물질 차단.</p>
+              <p class="t-ja">SPF50+ PA+++ トリプル機能性BBクリーム。美白・シワ改善・紫外線カット。Second Skin Filmで微細粉塵・汚染物質を遮断。</p>
               <span class="product-card__qty">50ml &nbsp;|&nbsp; MADE IN KOREA</span>
             </div>
           </div>
@@ -331,6 +366,7 @@
               <h4>Me Nyeo Cream W</h4>
               <p class="t-en">Natural tone-up cream with Goat Milk, Niacinamide &amp; Adenosine. Whitening + Anti-aging dual function. Lightweight, non-sticky finish.</p>
               <p class="t-ko">산양유·나이아신아마이드·아데노신 함유 내추럴 톤업 크림. 미백·안티에이징 이중 기능성. 가볍고 끈적임 없는 마무리.</p>
+              <p class="t-ja">山羊乳・ナイアシンアミド・アデノシン配合のナチュラルトーンアップクリーム。美白・アンチエイジングのダブル機能性。軽くベタつかない仕上がり。</p>
               <span class="product-card__qty">50ml &nbsp;|&nbsp; MADE IN KOREA</span>
             </div>
           </div>
@@ -341,11 +377,12 @@
       <div class="products__brand-divider">
         <span class="t-en">EFFNE <small>by lalafactory</small></span>
         <span class="t-ko">EFFNE <small>by 라라팩토리</small></span>
+        <span class="t-ja">EFFNE <small>by ララファクトリー</small></span>
       </div>
 
       <!-- Eye Masks -->
       <div class="products__category">
-        <h3 class="category__title"><span class="t-en">Eye Masks</span><span class="t-ko">아이 마스크</span></h3>
+        <h3 class="category__title"><span class="t-en">Eye Masks</span><span class="t-ko">아이 마스크</span><span class="t-ja">アイマスク</span></h3>
         <div class="products__grid">
           <div class="product-card">
             <div class="product-card__img">
@@ -356,6 +393,7 @@
               <h4>Calming Eye Mask</h4>
               <p class="t-en">Soothing hydrogel eye patch with Centella Asiatica &amp; Green Tea. Reduces puffiness and dark circles. No rinse-off required.</p>
               <p class="t-ko">센텔라 아시아티카·녹차 함유 진정 하이드로겔 아이 패치. 붓기·다크서클 케어. 잔여물 없이 사용 가능.</p>
+              <p class="t-ja">センテラアジアチカ・緑茶配合の鎮静ハイドロゲルアイパッチ。むくみ・ダークサークルケア。洗い流し不要。</p>
               <span class="product-card__qty">2.8g × 30pcs &nbsp;|&nbsp; MADE IN KOREA</span>
             </div>
           </div>
@@ -368,6 +406,7 @@
               <h4>Vitalizing Eye Mask</h4>
               <p class="t-en">Energizing hydrogel eye patch with Rose &amp; Adenosine. Firms and revitalises the delicate eye area. No rinse-off required.</p>
               <p class="t-ko">로즈·아데노신 함유 활력 하이드로겔 아이 패치. 눈가를 탄력있게 생기있게 케어. 잔여물 없이 사용 가능.</p>
+              <p class="t-ja">ローズ・アデノシン配合の活力ハイドロゲルアイパッチ。目元をハリと生気のあるケア。洗い流し不要。</p>
               <span class="product-card__qty">2.8g × 30pcs &nbsp;|&nbsp; MADE IN KOREA</span>
             </div>
           </div>
@@ -376,7 +415,7 @@
 
       <!-- Serum Pads -->
       <div class="products__category">
-        <h3 class="category__title"><span class="t-en">Serum Pads</span><span class="t-ko">세럼 패드</span></h3>
+        <h3 class="category__title"><span class="t-en">Serum Pads</span><span class="t-ko">세럼 패드</span><span class="t-ja">セラムパッド</span></h3>
         <div class="products__grid">
           <div class="product-card">
             <div class="product-card__img">
@@ -387,6 +426,7 @@
               <h4>Hydrogel Vitamin Serum Pads</h4>
               <p class="t-en">Brightening hydrogel pad soaked in Vitamin C &amp; Collagen serum. Even skin tone and radiance in one step.</p>
               <p class="t-ko">비타민 C·콜라겐 세럼이 가득한 미백 하이드로겔 패드. 한 번에 톤 정돈과 광채 케어.</p>
+              <p class="t-ja">ビタミンC・コラーゲンセラムをたっぷり含んだ美白ハイドロゲルパッド。一度のケアでトーン整え＆ツヤ感アップ。</p>
               <span class="product-card__qty">2.8g × 30pcs &nbsp;|&nbsp; MADE IN KOREA</span>
             </div>
           </div>
@@ -399,6 +439,7 @@
               <h4>Hydrogel Collagen Serum Pads</h4>
               <p class="t-en">Firming hydrogel pad with Hyaluronic Acid &amp; Collagen. Deeply hydrates and improves elasticity for plumper-looking skin.</p>
               <p class="t-ko">히알루론산·콜라겐 함유 탄력 하이드로겔 패드. 깊은 보습과 탄력 개선으로 풍성한 피부 케어.</p>
+              <p class="t-ja">ヒアルロン酸・コラーゲン配合のハリハイドロゲルパッド。深い保湿とハリ改善で豊かな肌へ。</p>
               <span class="product-card__qty">2.8g × 30pcs &nbsp;|&nbsp; MADE IN KOREA</span>
             </div>
           </div>
@@ -411,32 +452,36 @@
   <!-- ===== WHY HG ===== -->
   <section class="why section">
     <div class="container">
-      <p class="label label--center"><span class="t-en">Why HG Solution</span><span class="t-ko">왜 HG Solution인가</span></p>
-      <h2 class="text-center"><span class="t-en">Your Reliable K-Beauty Partner</span><span class="t-ko">믿을 수 있는 K-뷰티 파트너</span></h2>
+      <p class="label label--center"><span class="t-en">Why HG Solution</span><span class="t-ko">왜 HG Solution인가</span><span class="t-ja">HG Solutionの強み</span></p>
+      <h2 class="text-center"><span class="t-en">Your Reliable K-Beauty Partner</span><span class="t-ko">믿을 수 있는 K-뷰티 파트너</span><span class="t-ja">信頼できる韓国コスメパートナー</span></h2>
       <div class="why__grid">
         <div class="why__card">
           <div class="why__icon">&#9679;</div>
-          <h4><span class="t-en">Certified Products</span><span class="t-ko">인증된 제품</span></h4>
+          <h4><span class="t-en">Certified Products</span><span class="t-ko">인증된 제품</span><span class="t-ja">認証済み製品</span></h4>
           <p class="t-en">All products are Ministry of Food and Drug Safety certified with full safety and efficacy documentation available.</p>
           <p class="t-ko">식품의약품안전처 인증 제품으로, 안전성·유효성 관련 전체 서류를 제공합니다.</p>
+          <p class="t-ja">全製品が食品医薬品安全処の認証を取得しており、安全性・有効性に関する全資料をご提供可能です。</p>
         </div>
         <div class="why__card">
           <div class="why__icon">&#9679;</div>
-          <h4><span class="t-en">Direct from Korea</span><span class="t-ko">한국에서서 직접 소싱</span></h4>
+          <h4><span class="t-en">Direct from Korea</span><span class="t-ko">한국에서서 직접 소싱</span><span class="t-ja">韓国から直接調達</span></h4>
           <p class="t-en">We source directly from Korean manufacturers, ensuring authenticity, competitive pricing, and consistent supply.</p>
           <p class="t-ko">한국 제조사에서 직접 소싱하여 정품 보장, 경쟁력 있는 가격, 안정적인 공급을 실현합니다.</p>
+          <p class="t-ja">韓国の製造メーカーから直接調達し、正規品の保証、競争力のある価格、安定した供給を実現します。</p>
         </div>
         <div class="why__card">
           <div class="why__icon">&#9679;</div>
-          <h4><span class="t-en">B2B Export Ready</span><span class="t-ko">B2B 수출 전문</span></h4>
+          <h4><span class="t-en">B2B Export Ready</span><span class="t-ko">B2B 수출 전문</span><span class="t-ja">B2B輸出対応</span></h4>
           <p class="t-en">Experienced in international trade documentation, customs compliance, and global logistics coordination.</p>
           <p class="t-ko">국제 무역 서류, 통관, 글로벌 물류 전 분야에 풍부한 경험을 보유하고 있습니다.</p>
+          <p class="t-ja">国際貿易書類、通関、グローバル物流まで幅広い経験を有しています。</p>
         </div>
         <div class="why__card">
           <div class="why__icon">&#9679;</div>
-          <h4><span class="t-en">Dedicated Support</span><span class="t-ko">전담 지원</span></h4>
+          <h4><span class="t-en">Dedicated Support</span><span class="t-ko">전담 지원</span><span class="t-ja">専任サポート</span></h4>
           <p class="t-en">Responsive communication in English &amp; Korean. Fast response to inquiries, samples, and order management.</p>
           <p class="t-ko">영어·한국어로 빠른 소통. 문의·샘플·주문 관리에 신속하게 대응합니다.</p>
+          <p class="t-ja">英語・韓国語・日本語でスピーディーに対応。お問い合わせ・サンプル・受注管理に迅速に対応します。</p>
         </div>
       </div>
     </div>
@@ -446,10 +491,11 @@
   <section class="contact section" id="contact">
     <div class="container contact__inner">
       <div class="contact__info">
-        <p class="label"><span class="t-en">Get in Touch</span><span class="t-ko">문의하기</span></p>
-        <h2><span class="t-en">Let's Work Together</span><span class="t-ko">함께 일해요</span></h2>
+        <p class="label"><span class="t-en">Get in Touch</span><span class="t-ko">문의하기</span><span class="t-ja">お問い合わせ</span></p>
+        <h2><span class="t-en">Let's Work Together</span><span class="t-ko">함께 일해요</span><span class="t-ja">共に歩みましょう</span></h2>
         <p class="t-en">Interested in wholesale, distribution, or partnership opportunities? Send us a message and we'll get back to you within 1–2 business days.</p>
         <p class="t-ko">도매, 유통, 파트너십에 관심 있으신가요? 메시지를 남겨주시면 1~2 영업일 내에 답변드리겠습니다.</p>
+        <p class="t-ja">卸売、流通、パートナーシップにご関心がございますか？メッセージをお送りいただければ、1~2営業日以内にご返信いたします。</p>
         <ul class="contact__details">
           <li>
             <span class="contact__icon">&#9993;</span>
@@ -466,24 +512,25 @@
         </ul>
       </div>
       <form class="contact__form" id="contactForm" action="https://formspree.io/f/mdajypob" method="POST">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
         <div class="form-row">
           <div class="form-group">
-            <label for="name"><span class="t-en">Name *</span><span class="t-ko">이름 *</span></label>
-            <input type="text" id="name" name="name" data-ph-en="Your name" data-ph-ko="이름 입력" placeholder="Your name" required />
+            <label for="name"><span class="t-en">Name *</span><span class="t-ko">이름 *</span><span class="t-ja">お名前 *</span></label>
+            <input type="text" id="name" name="name" data-ph-en="Your name" data-ph-ko="이름 입력" data-ph-ja="山田太郎" placeholder="Your name" required />
           </div>
           <div class="form-group">
-            <label for="company"><span class="t-en">Company</span><span class="t-ko">회사명</span></label>
-            <input type="text" id="company" name="company" data-ph-en="Your company" data-ph-ko="회사명 입력" placeholder="Your company" />
+            <label for="company"><span class="t-en">Company</span><span class="t-ko">회사명</span><span class="t-ja">会社名</span></label>
+            <input type="text" id="company" name="company" data-ph-en="Your company" data-ph-ko="회사명 입력" data-ph-ja="御社名" placeholder="Your company" />
           </div>
         </div>
         <div class="form-group">
-          <label for="email"><span class="t-en">Email *</span><span class="t-ko">이메일 *</span></label>
-          <input type="email" id="email" name="email" data-ph-en="your@email.com" data-ph-ko="이메일 입력" placeholder="your@email.com" required />
+          <label for="email"><span class="t-en">Email *</span><span class="t-ko">이메일 *</span><span class="t-ja">メール *</span></label>
+          <input type="email" id="email" name="email" data-ph-en="your@email.com" data-ph-ko="이메일 입력" data-ph-ja="your@email.com" placeholder="your@email.com" required />
         </div>
         <div class="form-group">
-          <label for="country"><span class="t-en">Country *</span><span class="t-ko">국가 *</span></label>
+          <label for="country"><span class="t-en">Country *</span><span class="t-ko">국가 *</span><span class="t-ja">国 *</span></label>
           <div style="position:relative;">
-            <select id="country" name="country" required data-ph-en="Select your country..." data-ph-ko="국가를 선택하세요..." style="width:100%;padding:14px 40px 14px 16px;border:1.5px solid #e5e0d8;border-radius:8px;font-family:'Inter',sans-serif;font-size:14px;color:#1a1a1a;background:#faf9f7;outline:none;cursor:pointer;appearance:none;-webkit-appearance:none;transition:border-color 0.2s;">
+            <select id="country" name="country" required data-ph-en="Select your country..." data-ph-ko="국가를 선택하세요..." data-ph-ja="国を選択してください..." style="width:100%;padding:14px 40px 14px 16px;border:1.5px solid #e5e0d8;border-radius:8px;font-family:'Inter',sans-serif;font-size:14px;color:#1a1a1a;background:#faf9f7;outline:none;cursor:pointer;appearance:none;-webkit-appearance:none;transition:border-color 0.2s;">
               <option value="">Select your country...</option>
               <optgroup label="Asia Pacific">
                 <option value="CN">China</option>
@@ -532,10 +579,10 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="message"><span class="t-en">Message *</span><span class="t-ko">문의 내용 *</span></label>
-          <textarea id="message" name="message" rows="5" data-ph-en="Tell us about your business and what you're looking for..." data-ph-ko="사업 내용과 문의 사항을 알려주세요..." placeholder="Tell us about your business and what you're looking for..." required></textarea>
+          <label for="message"><span class="t-en">Message *</span><span class="t-ko">문의 내용 *</span><span class="t-ja">メッセージ *</span></label>
+          <textarea id="message" name="message" rows="5" data-ph-en="Tell us about your business and what you're looking for..." data-ph-ko="사업 내용과 문의 사항을 알려주세요..." data-ph-ja="ご事業内容とお問い合わせ内容をお聞かせください..." placeholder="Tell us about your business and what you're looking for..." required></textarea>
         </div>
-        <button type="submit" class="btn btn--primary btn--full"><span class="t-en">Send Inquiry</span><span class="t-ko">문의 보내기</span></button>
+        <button type="submit" class="btn btn--primary btn--full"><span class="t-en">Send Inquiry</span><span class="t-ko">문의 보내기</span><span class="t-ja">お問い合わせを送信</span></button>
       </form>
     </div>
   </section>
@@ -545,13 +592,13 @@
     <div class="container footer__inner">
       <div class="footer__brand">
         <span class="logo"><span class="logo__hg">HG</span><span class="logo__sol">Solution</span></span>
-        <p><span class="t-en">K-Beauty Export &amp; Distribution</span><span class="t-ko">K-뷰티 수출 · 유통</span><br />에이치지솔루션 | Business Reg. 666-39-01391</p>
+        <p><span class="t-en">K-Beauty Export &amp; Distribution</span><span class="t-ko">K-뷰티 수출 · 유통</span><span class="t-ja">韓国コスメ 輸出・流通</span><br />에이치지솔루션 | Business Reg. 666-39-01391</p>
       </div>
       <div class="footer__links">
-        <a href="#about"><span class="t-en">About</span><span class="t-ko">소개</span></a>
-        <a href="#brands"><span class="t-en">Brands</span><span class="t-ko">브랜드</span></a>
-        <a href="products.html"><span class="t-en">Products</span><span class="t-ko">제품</span></a>
-        <a href="contact.html"><span class="t-en">Contact</span><span class="t-ko">문의</span></a>
+        <a href="#about"><span class="t-en">About</span><span class="t-ko">소개</span><span class="t-ja">会社情報</span></a>
+        <a href="#brands"><span class="t-en">Brands</span><span class="t-ko">브랜드</span><span class="t-ja">ブランド</span></a>
+        <a href="products.html"><span class="t-en">Products</span><span class="t-ko">제품</span><span class="t-ja">製品</span></a>
+        <a href="contact.html"><span class="t-en">Contact</span><span class="t-ko">문의</span><span class="t-ja">お問い合わせ</span></a>
       </div>
       <div class="footer__copy">
         <p>&copy; 2025 HG Solution. All rights reserved.</p>
@@ -561,8 +608,33 @@
 
   <script src="main.js"></script>
   <script>
+    const I18N = {
+      en: {
+        title: 'Inquiry Received!',
+        body: 'Thank you for reaching out.<br />Our team will review your inquiry and get back to you<br /><strong style="color:#2d5a3d;">within 1–2 business days.</strong>',
+        sending: 'Sending...',
+        error: 'Something went wrong — try again',
+        netError: 'Network error — try again',
+      },
+      ko: {
+        title: '문의가 접수되었습니다!',
+        body: '문의해 주셔서 감사합니다.<br />담당자가 확인 후<br /><strong style="color:#2d5a3d;">1~2 영업일 내에 연락드리겠습니다.</strong>',
+        sending: '전송 중...',
+        error: '오류가 발생했습니다 — 다시 시도해 주세요',
+        netError: '네트워크 오류 — 다시 시도해 주세요',
+      },
+      ja: {
+        title: 'お問い合わせを受け付けました！',
+        body: 'お問い合わせいただきありがとうございます。<br />担当者にて確認後、<br /><strong style="color:#2d5a3d;">1~2営業日以内にご返信いたします。</strong>',
+        sending: '送信中...',
+        error: 'エラーが発生しました — 再度お試しください',
+        netError: 'ネットワークエラー — 再度お試しください',
+      },
+    };
+    function getT() { return I18N[document.documentElement.dataset.lang] || I18N.en; }
+
     function showSuccess(form) {
-      const ko = document.documentElement.dataset.lang === 'ko';
+      const t = getT();
       form.innerHTML = `
         <div style="
           text-align:center;
@@ -580,13 +652,10 @@
             font-size:24px;color:#fff;
           ">✓</div>
           <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:#1a1a1a;margin-bottom:12px;">
-            ${ko ? '문의가 접수되었습니다!' : 'Inquiry Received!'}
+            ${t.title}
           </h3>
           <p style="color:#6b6b6b;font-size:0.9rem;line-height:1.7;margin:0;">
-            ${ko
-              ? '문의해 주셔서 감사합니다.<br />담당자가 확인 후<br /><strong style="color:#2d5a3d;">1~2 영업일 내에 연락드리겠습니다.</strong>'
-              : 'Thank you for reaching out.<br />Our team will review your inquiry and get back to you<br /><strong style="color:#2d5a3d;">within 1–2 business days.</strong>'
-            }
+            ${t.body}
           </p>
         </div>`;
     }
@@ -598,8 +667,8 @@
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
         btn.disabled = true;
-        const ko = document.documentElement.dataset.lang === 'ko';
-        btn.textContent = ko ? '전송 중...' : 'Sending...';
+        const t = getT();
+        btn.textContent = t.sending;
         try {
           const res = await fetch(form.action, {
             method: 'POST',
@@ -609,11 +678,11 @@
           if (res.ok) {
             showSuccess(form);
           } else {
-            btn.textContent = ko ? '오류가 발생했습니다 — 다시 시도해 주세요' : 'Something went wrong — try again';
+            btn.textContent = t.error;
             btn.disabled = false;
           }
         } catch {
-          btn.textContent = ko ? '네트워크 오류 — 다시 시도해 주세요' : 'Network error — try again';
+          btn.textContent = t.netError;
           btn.disabled = false;
         }
       });
